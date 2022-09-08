@@ -13,6 +13,9 @@
 		4FD58ADC28CA668900EC4713 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD58ADB28CA668900EC4713 /* Preview Assets.xcassets */; };
 		4FD58AE728CA668900EC4713 /* CHOT_ECG_ScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD58AE628CA668900EC4713 /* CHOT_ECG_ScannerTests.swift */; };
 		4FD58AF228CA668900EC4713 /* CHOT_ECG_ScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD58AF128CA668900EC4713 /* CHOT_ECG_ScannerUITests.swift */; };
+		4FD58B3C28CA7EC000EC4713 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD58B3B28CA7EC000EC4713 /* CameraModel.swift */; };
+		4FD58B4328CA7F0E00EC4713 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD58B4228CA7F0E00EC4713 /* CameraManager.swift */; };
+		4FD58B4528CA843A00EC4713 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD58B4428CA843A00EC4713 /* CameraPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		4FD58AED28CA668900EC4713 /* CHOT ECG ScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CHOT ECG ScannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD58AF128CA668900EC4713 /* CHOT_ECG_ScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHOT_ECG_ScannerUITests.swift; sourceTree = "<group>"; };
 		4FD58AF328CA668900EC4713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FD58B3B28CA7EC000EC4713 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		4FD58B4228CA7F0E00EC4713 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		4FD58B4428CA843A00EC4713 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,9 @@
 		4FD58AD328CA668800EC4713 /* CHOT ECG Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				4FD58B3F28CA7ED600EC4713 /* Views */,
+				4FD58B3E28CA7ECA00EC4713 /* ViewModels */,
+				4FD58B3D28CA7EC500EC4713 /* Models */,
 				4FD58AD428CA668800EC4713 /* CHOT_ECG_ScannerApp.swift */,
 				4FD58AD628CA668800EC4713 /* ContentView.swift */,
 				4FD58AD828CA668900EC4713 /* Assets.xcassets */,
@@ -128,6 +137,30 @@
 				4FD58AF328CA668900EC4713 /* Info.plist */,
 			);
 			path = "CHOT ECG ScannerUITests";
+			sourceTree = "<group>";
+		};
+		4FD58B3D28CA7EC500EC4713 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4FD58B3B28CA7EC000EC4713 /* CameraModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4FD58B3E28CA7ECA00EC4713 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4FD58B4228CA7F0E00EC4713 /* CameraManager.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4FD58B3F28CA7ED600EC4713 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FD58B4428CA843A00EC4713 /* CameraPreview.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FD58B4528CA843A00EC4713 /* CameraPreview.swift in Sources */,
 				4FD58AD728CA668800EC4713 /* ContentView.swift in Sources */,
 				4FD58AD528CA668800EC4713 /* CHOT_ECG_ScannerApp.swift in Sources */,
+				4FD58B4328CA7F0E00EC4713 /* CameraManager.swift in Sources */,
+				4FD58B3C28CA7EC000EC4713 /* CameraModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
