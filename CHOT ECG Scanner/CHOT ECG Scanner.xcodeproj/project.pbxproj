@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F908A8728CBBD1E00E5D10D /* VideoPreviewOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908A8628CBBD1E00E5D10D /* VideoPreviewOverlay.swift */; };
+		4F908A8928CBBD4C00E5D10D /* TakenPhotoOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908A8828CBBD4C00E5D10D /* TakenPhotoOverlay.swift */; };
 		4FD58AD528CA668800EC4713 /* CHOT_ECG_ScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD58AD428CA668800EC4713 /* CHOT_ECG_ScannerApp.swift */; };
 		4FD58AD728CA668800EC4713 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD58AD628CA668800EC4713 /* ContentView.swift */; };
 		4FD58AD928CA668900EC4713 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD58AD828CA668900EC4713 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F908A8628CBBD1E00E5D10D /* VideoPreviewOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewOverlay.swift; sourceTree = "<group>"; };
+		4F908A8828CBBD4C00E5D10D /* TakenPhotoOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakenPhotoOverlay.swift; sourceTree = "<group>"; };
 		4FD58AD128CA668800EC4713 /* CHOT ECG Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHOT ECG Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FD58AD428CA668800EC4713 /* CHOT_ECG_ScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHOT_ECG_ScannerApp.swift; sourceTree = "<group>"; };
 		4FD58AD628CA668800EC4713 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,7 +109,6 @@
 				4FD58B3E28CA7ECA00EC4713 /* ViewModels */,
 				4FD58B3D28CA7EC500EC4713 /* Models */,
 				4FD58AD428CA668800EC4713 /* CHOT_ECG_ScannerApp.swift */,
-				4FD58AD628CA668800EC4713 /* ContentView.swift */,
 				4FD58AD828CA668900EC4713 /* Assets.xcassets */,
 				4FD58ADD28CA668900EC4713 /* Info.plist */,
 				4FD58ADA28CA668900EC4713 /* Preview Content */,
@@ -158,7 +161,10 @@
 		4FD58B3F28CA7ED600EC4713 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4FD58AD628CA668800EC4713 /* ContentView.swift */,
 				4FD58B4428CA843A00EC4713 /* CameraPreview.swift */,
+				4F908A8628CBBD1E00E5D10D /* VideoPreviewOverlay.swift */,
+				4F908A8828CBBD4C00E5D10D /* TakenPhotoOverlay.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,9 +298,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F908A8928CBBD4C00E5D10D /* TakenPhotoOverlay.swift in Sources */,
 				4FD58B4528CA843A00EC4713 /* CameraPreview.swift in Sources */,
 				4FD58AD728CA668800EC4713 /* ContentView.swift in Sources */,
 				4FD58AD528CA668800EC4713 /* CHOT_ECG_ScannerApp.swift in Sources */,
+				4F908A8728CBBD1E00E5D10D /* VideoPreviewOverlay.swift in Sources */,
 				4FD58B4328CA7F0E00EC4713 /* CameraManager.swift in Sources */,
 				4FD58B3C28CA7EC000EC4713 /* CameraModel.swift in Sources */,
 			);

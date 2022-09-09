@@ -8,7 +8,9 @@
 import Foundation
 import AVFoundation
 
-struct CameraModel
-{
-    
-}
+// Should move immutable objects/functions here
+
+//struct CameraModel
+//{
+//
+//}

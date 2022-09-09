@@ -7,14 +7,21 @@
 
 import Foundation
 import AVFoundation
+import SwiftUI
 
-class CameraManager: ObservableObject
+class CameraManager: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate
 {
     
+    // Not sure what exactly needs to be published yet
     @Published var session = AVCaptureSession()
     
     var output = AVCapturePhotoOutput()
     
+    var preview = AVCaptureVideoPreviewLayer()
+    
+    var photoTaken = false
+    
+    var photoData = Data(count: 0)
     
 }
 
@@ -29,6 +36,7 @@ extension CameraManager
             
             let device = AVCaptureDevice.default(.builtInDualCamera, for: .video, position: .back)
             
+            // MARK: FIX ME
             // Shouldn't force unwrap unless initialization of device throws error when returning nil
             let input = try AVCaptureDeviceInput(device: device!)
             
@@ -51,6 +59,64 @@ extension CameraManager
     }
     
     
+    func capturePhoto()
+    {
+        DispatchQueue.global(qos: .background).async
+        {
+            self.output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+            
+            self.session.stopRunning()
+            
+            DispatchQueue.main.async
+            {
+                // Toggle the photo taken status
+                withAnimation
+                {
+                    self.photoTaken.toggle()
+                }
+            }
+        }
+    }
+    
+    func resetCamera()
+    {
+        DispatchQueue.global(qos: .background).async
+        {
+            self.session.startRunning()
+            
+            DispatchQueue.main.async
+            {
+                // Toggle the photo taken status
+                withAnimation
+                {
+                    self.photoTaken.toggle()
+                }
+            }
+        }
+    }
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?)
+    {
+        if (error != nil)
+        {
+            return
+        }
+        
+        guard let imageData = photo.fileDataRepresentation()
+        else {return}
+        
+        self.photoData = imageData
+    }
+    
+    func savePhoto()
+    {
+        // Force unwrap should be okay here as data is ensured in
+        let image = UIImage(data: self.photoData)!
+        
+        // Probably not going save into an album, but probably save as a file in Files app
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    }
+    
     
     
     func checkPermissions ()
@@ -59,11 +125,21 @@ extension CameraManager
         switch AVCaptureDevice.authorizationStatus(for: .video)
         {
         case.authorized:
-            // set up session
+            initializeCamera()
             return
             
         case.notDetermined:
             // request permission
+            AVCaptureDevice.requestAccess(for: .video)
+            {
+                status in
+                
+                if status
+                {
+                    self.initializeCamera()
+                }
+                
+            }
             return
             
         case.restricted:
