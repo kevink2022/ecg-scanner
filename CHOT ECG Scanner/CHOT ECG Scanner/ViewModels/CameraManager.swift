@@ -8,6 +8,7 @@
 import Foundation
 import AVFoundation
 import SwiftUI
+import VisionKit
 
 class CameraManager: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate
 {
@@ -19,15 +20,22 @@ class CameraManager: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate
     
     var preview = AVCaptureVideoPreviewLayer()
     
-    var photoTaken = false
+    @Published var photoTaken = false
     
     var photoData = Data(count: 0)
+    
+    var scanningDocVS = VNDocumentCameraViewController()
     
 }
 
 
 extension CameraManager
 {
+    func initializeDocScan()
+    {
+        self.scanningDocVS.delegate
+    }
+    
     func initializeCamera()
     {
         do
@@ -99,22 +107,29 @@ extension CameraManager
     {
         if (error != nil)
         {
+            print(error!)
             return
         }
         
         guard let imageData = photo.fileDataRepresentation()
-        else {return}
+        else {
+            print("bad news")
+            return
+            
+        }
         
+        print("saving image data")
         self.photoData = imageData
     }
     
     func savePhoto()
-    {
-        // Force unwrap should be okay here as data is ensured in
-        let image = UIImage(data: self.photoData)!
-        
-        // Probably not going save into an album, but probably save as a file in Files app
-        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    {        
+        // Force unwrap here is bad
+        if let image = UIImage(data: self.photoData)
+        {
+            // Probably not going save into an album, but probably save as a file in Files app
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        }
     }
     
     

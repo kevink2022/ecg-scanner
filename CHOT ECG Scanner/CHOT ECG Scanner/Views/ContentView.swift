@@ -14,32 +14,44 @@ struct ContentView: View
     
     var body: some View
     {
+        // CameraPreview Layer
+        CameraPreviewView(camera: camera)
+            .ignoresSafeArea()
+        
         ZStack
         {
             // Camera Preview Stage
             if (camera.photoTaken)
             {
-                // Taken Photo
+                // Taken Photo Overlay
+                Spacer()
                 
-                
-                // Photo Overlay
+                Button(action: {
+                    camera.savePhoto()
+                    camera.resetCamera()
+                })
+                {
+                    Image(systemName: "square.and.arrow.down.fill")
+                        .font(.largeTitle)
+                }
                 
             }
             // Save Photo Stage
             else
             {
-                // CameraPreview Layer
-                Color.black
-                    .ignoresSafeArea()
-
                 // Preview Overlay
+                VStack
+                {
+                    Spacer()
+                    
+                    Button(action: { camera.capturePhoto() })
+                    {
+                        Image(systemName: "camera.aperture")
+                            .font(.largeTitle)
+                    }
+                }
             }
-            
-            
-            
-            
-            
-        }
+        }.onAppear(perform: {camera.checkPermissions()})
     }
 }
 
