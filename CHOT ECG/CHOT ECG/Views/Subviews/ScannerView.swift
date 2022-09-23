@@ -10,10 +10,6 @@ import SwiftUI
 
 struct ScannerView: UIViewControllerRepresentable
 {
-    
-    // Temporary to change it easily
-    typealias CompletionReturnValue = [ECGScan]
-    
     private var coordinator : ScanCoordinator
     
     init(coordinator: ScanCoordinator)
@@ -21,13 +17,8 @@ struct ScannerView: UIViewControllerRepresentable
         self.coordinator = coordinator
     }
     
-//    private let completionHandler: (CompletionReturnValue?) -> Void
-//
-//    init(completion: @escaping (CompletionReturnValue?) -> Void)
-//    {
-//        self.completionHandler = completion
-//    }
-
+    
+    // MARK: to Conform to Protocol
     func makeUIViewController(context: UIViewControllerRepresentableContext<ScannerView>) -> VNDocumentCameraViewController
     {
         let viewController = VNDocumentCameraViewController()

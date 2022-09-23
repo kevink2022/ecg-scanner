@@ -9,6 +9,8 @@ import Foundation
 import VisionKit
 import Vision
 
+
+
 final class ScanParser
 {
     
@@ -21,21 +23,27 @@ final class ScanParser
     
     private let queue = DispatchQueue(label: "scan-codes", qos: .default, attributes: [], autoreleaseFrequency: .workItem)
     
-    /// Take a scan instance and from each image create a ECGPrintScan
-    func parseScan(withCompletionHandler completionHandler: @escaping (([ECGScan]) -> Void)) -> [ECGScan]
+    /// I kinda want to take this queue out and make it an input so
+    /// that this whole class could be make a struct, and this
+    /// function could be made static. It definitly isn't needed now,
+    /// but will likely be needed once we start using text recognition
+    /// again for the personal info
+    func parseScan() -> [ECGScan]
     {
+        var scans : Array<ECGScan> = []
+        
         queue.async
         {
-            // Get images from scan
             let images = (0..<self.cameraScan.pageCount).compactMap
             {
                 self.cameraScan.imageOfPage(at: $0).cgImage
             }
             
-            let scans = images.map
+            scans = images.map
             {
                 ECGScan(personalInfo: .standard, image: $0)
             }
+            
             
 //            // For getting text out of images, will need to look into this for personal and scan info
 //            let imagesAndRequests = images.map
@@ -65,13 +73,10 @@ final class ScanParser
 //            }
 //
 
-            DispatchQueue.main.async
-            {
-                completionHandler(scans)
-            }
+//            DispatchQueue.main.async
+//            {
+//            }
         }
-        
-        
-        return []
+        return scans
     }
 }

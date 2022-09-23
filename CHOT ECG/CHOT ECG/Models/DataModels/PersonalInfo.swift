@@ -31,3 +31,8 @@ struct PersonalInfo
         case caucasian, asian, black
     }
 }
+
+extension PersonalInfo
+{
+    var fullName : String { "\(self.firstName) \(self.lastName)"}
+}

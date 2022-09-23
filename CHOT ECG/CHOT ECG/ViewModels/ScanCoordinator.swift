@@ -10,15 +10,17 @@ import VisionKit
 
 final class ScanCoordinator: NSObject, VNDocumentCameraViewControllerDelegate
 {
-//    private let completionHandler: (DevConstants.CompletionReturnValue?) -> Void
-//
-//    init(completion: @escaping (DevConstants.CompletionReturnValue?) -> Void)
-//    {
-//        self.completionHandler = completion
-//    }
-     
-    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: DevConstants.CompletionReturnValue)
+    private let completionHandler: (Array<ECGScan>) -> Void
+
+    init(completion: @escaping (Array<ECGScan>) -> Void)
     {
+        self.completionHandler = completion
+    }
+     
+    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan)
+    {
+        let parser = ScanParser(cameraScan: scan)
+        parser.parseScan()
         //completionHandler(scan)
     }
      
@@ -32,9 +34,4 @@ final class ScanCoordinator: NSObject, VNDocumentCameraViewControllerDelegate
         //print(error)
         //completionHandler(nil)
     }
-}
-
-struct DevConstants
-{
-    typealias CompletionReturnValue = [ECGScan]
 }

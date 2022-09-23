@@ -14,6 +14,7 @@ struct ContentView: View
     
     var body: some View
     {
+        // This is ugly
         NavigationView
         {
             VStack
@@ -26,16 +27,14 @@ struct ContentView: View
                         {
                             scan in
                             
-                            NavigationLink
-                            (
-                                destination:ScrollView
-                                {
-                                    ScanView(
-                                },
+                            // Refectoring this to look nice keeps breaking things
+                            // If this ends up being the type of GUI we use I'll figure it out
+                            NavigationLink(
+                                destination:ScrollView { ScanView(scan: scan) },
                                 label: {
-                                    Text(text.content).lineLimit(1)
-                                }
-                            )
+                                    Text(scan.personalInfo.fullName)
+                                        .lineLimit(1)
+                                })
                         }
                     }
                 }
@@ -54,7 +53,7 @@ struct ContentView: View
             }
             .sheet(isPresented: $showScannerSheet)
             {
-                
+                ScannerView(coordinator: manager.coordinator)
             }
             )
         }
