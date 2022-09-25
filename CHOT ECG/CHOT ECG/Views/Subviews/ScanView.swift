@@ -18,6 +18,8 @@ struct ScanView: View
             Text(scan.personalInfo.fullName)
             
             Image(scan.image, scale: 1, label: Text(scan.personalInfo.lastName))
+                .resizable()
+                .aspectRatio(contentMode: .fit)
         }
     }
 }

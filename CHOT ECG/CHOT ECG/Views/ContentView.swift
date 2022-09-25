@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View
 {
-    @ObservedObject var manager = ECGAppManager()
+    @EnvironmentObject var manager : ECGAppManager
     @State var showScannerSheet = false
     
     var body: some View
@@ -27,6 +27,9 @@ struct ContentView: View
                         {
                             scans in
                             manager.app.addScans(scans)
+                            
+                            print(manager.app.scans)
+                            showScannerSheet = false
                         }
                     }
                 )

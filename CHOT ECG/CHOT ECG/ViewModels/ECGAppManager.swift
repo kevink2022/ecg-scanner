@@ -9,7 +9,7 @@ import Foundation
 
 final class ECGAppManager : ObservableObject
 {
-    var app : ECGApp //= ECGApp(scans: [])
+    @Published var app : ECGApp //= ECGApp(scans: [])
     
     // Need to look into more details about how queues work to see if this is the best fit
     // for our application
