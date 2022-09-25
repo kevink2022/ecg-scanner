@@ -23,10 +23,11 @@
 		4F6E6EC128DBF62700CE6FA6 /* ECGAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6EC028DBF62700CE6FA6 /* ECGAnalysis.swift */; };
 		4F6E6EC328DC144000CE6FA6 /* ScanParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6EC228DC144000CE6FA6 /* ScanParser.swift */; };
 		4F6E6EC628DC97C300CE6FA6 /* ScanCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6EC528DC97C300CE6FA6 /* ScanCoordinator.swift */; };
-		4F6E6EC828DC9B1700CE6FA6 /* ECGScannerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6EC728DC9B1700CE6FA6 /* ECGScannerManager.swift */; };
+		4F6E6EC828DC9B1700CE6FA6 /* ECGAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6EC728DC9B1700CE6FA6 /* ECGAppManager.swift */; };
 		4F6E6ECA28DC9FFE00CE6FA6 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6EC928DC9FFE00CE6FA6 /* ScanView.swift */; };
-		4F6E6ECC28DD194700CE6FA6 /* ECGScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6ECB28DD194700CE6FA6 /* ECGScanner.swift */; };
-		4F6E6ECE28DD1B7900CE6FA6 /* ECGScanner+Vision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6ECD28DD1B7900CE6FA6 /* ECGScanner+Vision.swift */; };
+		4F6E6ECC28DD194700CE6FA6 /* ECGApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6ECB28DD194700CE6FA6 /* ECGApp.swift */; };
+		4F6E6ED328E0F6BD00CE6FA6 /* ECGSummaryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6ED228E0F6BD00CE6FA6 /* ECGSummaryList.swift */; };
+		4F6E6ED628E0F88F00CE6FA6 /* NewScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6ED528E0F88F00CE6FA6 /* NewScanButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,10 +67,11 @@
 		4F6E6EC028DBF62700CE6FA6 /* ECGAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGAnalysis.swift; sourceTree = "<group>"; };
 		4F6E6EC228DC144000CE6FA6 /* ScanParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanParser.swift; sourceTree = "<group>"; };
 		4F6E6EC528DC97C300CE6FA6 /* ScanCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCoordinator.swift; sourceTree = "<group>"; };
-		4F6E6EC728DC9B1700CE6FA6 /* ECGScannerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGScannerManager.swift; sourceTree = "<group>"; };
+		4F6E6EC728DC9B1700CE6FA6 /* ECGAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGAppManager.swift; sourceTree = "<group>"; };
 		4F6E6EC928DC9FFE00CE6FA6 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
-		4F6E6ECB28DD194700CE6FA6 /* ECGScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGScanner.swift; sourceTree = "<group>"; };
-		4F6E6ECD28DD1B7900CE6FA6 /* ECGScanner+Vision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ECGScanner+Vision.swift"; sourceTree = "<group>"; };
+		4F6E6ECB28DD194700CE6FA6 /* ECGApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGApp.swift; sourceTree = "<group>"; };
+		4F6E6ED228E0F6BD00CE6FA6 /* ECGSummaryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGSummaryList.swift; sourceTree = "<group>"; };
+		4F6E6ED528E0F88F00CE6FA6 /* NewScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewScanButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +162,7 @@
 			children = (
 				4F6E6EC228DC144000CE6FA6 /* ScanParser.swift */,
 				4F6E6EBA28DBF4FA00CE6FA6 /* DataModels */,
-				4F6E6ECB28DD194700CE6FA6 /* ECGScanner.swift */,
-				4F6E6ECD28DD1B7900CE6FA6 /* ECGScanner+Vision.swift */,
+				4F6E6ECB28DD194700CE6FA6 /* ECGApp.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,6 +170,7 @@
 		4F6E6EAE28D9F92100CE6FA6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4F6E6ED428E0F88000CE6FA6 /* Buttons */,
 				4F6E6EB128D9F95900CE6FA6 /* Subviews */,
 				4F6E6E8328D9F62000CE6FA6 /* ContentView.swift */,
 			);
@@ -179,7 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				4F6E6EC528DC97C300CE6FA6 /* ScanCoordinator.swift */,
-				4F6E6EC728DC9B1700CE6FA6 /* ECGScannerManager.swift */,
+				4F6E6EC728DC9B1700CE6FA6 /* ECGAppManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -189,6 +191,7 @@
 			children = (
 				4F6E6EB428DBE8D100CE6FA6 /* ScannerView.swift */,
 				4F6E6EC928DC9FFE00CE6FA6 /* ScanView.swift */,
+				4F6E6ED228E0F6BD00CE6FA6 /* ECGSummaryList.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -204,6 +207,14 @@
 				4F6E6EC028DBF62700CE6FA6 /* ECGAnalysis.swift */,
 			);
 			path = DataModels;
+			sourceTree = "<group>";
+		};
+		4F6E6ED428E0F88000CE6FA6 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				4F6E6ED528E0F88F00CE6FA6 /* NewScanButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,11 +349,12 @@
 			files = (
 				4F6E6EC128DBF62700CE6FA6 /* ECGAnalysis.swift in Sources */,
 				4F6E6EC628DC97C300CE6FA6 /* ScanCoordinator.swift in Sources */,
-				4F6E6ECC28DD194700CE6FA6 /* ECGScanner.swift in Sources */,
-				4F6E6ECE28DD1B7900CE6FA6 /* ECGScanner+Vision.swift in Sources */,
+				4F6E6ECC28DD194700CE6FA6 /* ECGApp.swift in Sources */,
 				4F6E6EAD28D9F63A00CE6FA6 /* ECGSummary.swift in Sources */,
 				4F6E6EB528DBE8D100CE6FA6 /* ScannerView.swift in Sources */,
-				4F6E6EC828DC9B1700CE6FA6 /* ECGScannerManager.swift in Sources */,
+				4F6E6ED328E0F6BD00CE6FA6 /* ECGSummaryList.swift in Sources */,
+				4F6E6ED628E0F88F00CE6FA6 /* NewScanButton.swift in Sources */,
+				4F6E6EC828DC9B1700CE6FA6 /* ECGAppManager.swift in Sources */,
 				4F6E6EC328DC144000CE6FA6 /* ScanParser.swift in Sources */,
 				4F6E6ECA28DC9FFE00CE6FA6 /* ScanView.swift in Sources */,
 				4F6E6E8428D9F62000CE6FA6 /* ContentView.swift in Sources */,
@@ -512,6 +524,7 @@
 				DEVELOPMENT_TEAM = Q9B7SPU3TM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "CHOT ECG uses your camera to scan ECG printouts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -541,6 +554,7 @@
 				DEVELOPMENT_TEAM = Q9B7SPU3TM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "CHOT ECG uses your camera to scan ECG printouts";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

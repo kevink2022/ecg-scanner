@@ -8,10 +8,16 @@
 import SwiftUI
 
 @main
-struct CHOT_ECGApp: App {
-    var body: some Scene {
-        WindowGroup {
+struct CHOT_ECGApp: App
+{
+    @StateObject var manager = ECGAppManager()
+    
+    var body: some Scene
+    {
+        WindowGroup
+        {
             ContentView()
+                .environmentObject(manager)
         }
     }
 }

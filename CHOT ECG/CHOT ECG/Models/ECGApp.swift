@@ -7,17 +7,15 @@
 
 import Foundation
 
-struct ECGScanner
+struct ECGApp
 {
     var scans : Array<ECGScan>
 }
 
-extension ECGScanner
+extension ECGApp
 {
-    static func getScans(scans: Array<ECGScan>)
+    mutating func addScans(_ scans: [ECGScan]?)
     {
-        var scans : Array<ECGScan> = []
-        
-
+        self.scans.append(contentsOf: scans ?? [])
     }
 }

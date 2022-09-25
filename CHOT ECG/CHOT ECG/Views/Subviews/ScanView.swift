@@ -11,8 +11,14 @@ struct ScanView: View
 {
     let scan : ECGScan
     
-    var body: some View {
-        Text(scan.personalInfo.firstName)
+    var body: some View
+    {
+        VStack
+        {
+            Text(scan.personalInfo.fullName)
+            
+            Image(scan.image, scale: 1, label: Text(scan.personalInfo.lastName))
+        }
     }
 }
 

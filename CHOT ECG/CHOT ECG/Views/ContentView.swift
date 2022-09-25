@@ -9,53 +9,27 @@ import SwiftUI
 
 struct ContentView: View
 {
-    @ObservedObject var manager = ScannerManager()
+    @ObservedObject var manager = ECGAppManager()
     @State var showScannerSheet = false
     
     var body: some View
     {
-        // This is ugly
         NavigationView
         {
-            VStack
-            {
-                if manager.scans.count > 0
-                {
-                    List
+            ECGSummaryList()
+                .navigationTitle("CHOT ECG")
+                .navigationBarItems(trailing:
+                    
+                    NewScanButton(showScannerSheet: $showScannerSheet)
+                    .sheet(isPresented: $showScannerSheet)
                     {
-                        ForEach(manager.scans)
+                        ScannerView
                         {
-                            scan in
-                            
-                            // Refectoring this to look nice keeps breaking things
-                            // If this ends up being the type of GUI we use I'll figure it out
-                            NavigationLink(
-                                destination:ScrollView { ScanView(scan: scan) },
-                                label: {
-                                    Text(scan.personalInfo.fullName)
-                                        .lineLimit(1)
-                                })
+                            scans in
+                            manager.app.addScans(scans)
                         }
                     }
-                }
-                else
-                {
-                    Text("No scans yet").font(.title)
-                }
-            }
-            .navigationTitle("CHOT ECG")
-            .navigationBarItems(trailing: Button
-            {
-                self.showScannerSheet = true
-            } label: {
-                Image(systemName: "doc.text.viewfinder")
-                    .font(.title)
-            }
-            .sheet(isPresented: $showScannerSheet)
-            {
-                ScannerView(coordinator: manager.coordinator)
-            }
-            )
+                )
         }
     }
 }
@@ -63,5 +37,6 @@ struct ContentView: View
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(ECGAppManager())
     }
 }

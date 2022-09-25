@@ -10,7 +10,6 @@ import VisionKit
 import Vision
 
 
-
 final class ScanParser
 {
     
@@ -19,6 +18,7 @@ final class ScanParser
     init(cameraScan:VNDocumentCameraScan)
     {
         self.cameraScan = cameraScan
+        
     }
     
     private let queue = DispatchQueue(label: "scan-codes", qos: .default, attributes: [], autoreleaseFrequency: .workItem)
@@ -28,7 +28,7 @@ final class ScanParser
     /// function could be made static. It definitly isn't needed now,
     /// but will likely be needed once we start using text recognition
     /// again for the personal info
-    func parseScan() -> [ECGScan]
+    func parseScan(withCompletionHandler completionHandler: @escaping ([ECGScan]) -> Void)
     {
         var scans : Array<ECGScan> = []
         
@@ -73,10 +73,11 @@ final class ScanParser
 //            }
 //
 
-//            DispatchQueue.main.async
-//            {
-//            }
+            DispatchQueue.main.async
+            {
+                completionHandler(scans)
+            }
         }
-        return scans
+        
     }
 }

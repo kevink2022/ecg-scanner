@@ -12,11 +12,10 @@ struct ScannerView: UIViewControllerRepresentable
 {
     private var coordinator : ScanCoordinator
     
-    init(coordinator: ScanCoordinator)
+    init(completion: @escaping ([ECGScan]?) -> Void)
     {
-        self.coordinator = coordinator
+        self.coordinator = ScanCoordinator(completion: completion)
     }
-    
     
     // MARK: to Conform to Protocol
     func makeUIViewController(context: UIViewControllerRepresentableContext<ScannerView>) -> VNDocumentCameraViewController
