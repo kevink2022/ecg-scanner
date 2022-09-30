@@ -1,0 +1,625 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F908A8728CBBD1E00E5D10D /* VideoPreviewOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908A8628CBBD1E00E5D10D /* VideoPreviewOverlay.swift */; };
+		4F908A8928CBBD4C00E5D10D /* TakenPhotoOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F908A8828CBBD4C00E5D10D /* TakenPhotoOverlay.swift */; };
+		4FD58AD528CA668800EC4713 /* CHOT_ECG_ScannerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD58AD428CA668800EC4713 /* CHOT_ECG_ScannerApp.swift */; };
+		4FD58AD728CA668800EC4713 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD58AD628CA668800EC4713 /* ContentView.swift */; };
+		4FD58AD928CA668900EC4713 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD58AD828CA668900EC4713 /* Assets.xcassets */; };
+		4FD58ADC28CA668900EC4713 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FD58ADB28CA668900EC4713 /* Preview Assets.xcassets */; };
+		4FD58AE728CA668900EC4713 /* CHOT_ECG_ScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD58AE628CA668900EC4713 /* CHOT_ECG_ScannerTests.swift */; };
+		4FD58AF228CA668900EC4713 /* CHOT_ECG_ScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD58AF128CA668900EC4713 /* CHOT_ECG_ScannerUITests.swift */; };
+		4FD58B3C28CA7EC000EC4713 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD58B3B28CA7EC000EC4713 /* CameraModel.swift */; };
+		4FD58B4328CA7F0E00EC4713 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD58B4228CA7F0E00EC4713 /* CameraManager.swift */; };
+		4FD58B4528CA843A00EC4713 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD58B4428CA843A00EC4713 /* CameraPreview.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4FD58AE328CA668900EC4713 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FD58AC928CA668800EC4713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FD58AD028CA668800EC4713;
+			remoteInfo = "CHOT ECG Scanner";
+		};
+		4FD58AEE28CA668900EC4713 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4FD58AC928CA668800EC4713 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FD58AD028CA668800EC4713;
+			remoteInfo = "CHOT ECG Scanner";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4F908A8628CBBD1E00E5D10D /* VideoPreviewOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewOverlay.swift; sourceTree = "<group>"; };
+		4F908A8828CBBD4C00E5D10D /* TakenPhotoOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakenPhotoOverlay.swift; sourceTree = "<group>"; };
+		4FD58AD128CA668800EC4713 /* CHOT ECG Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHOT ECG Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FD58AD428CA668800EC4713 /* CHOT_ECG_ScannerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHOT_ECG_ScannerApp.swift; sourceTree = "<group>"; };
+		4FD58AD628CA668800EC4713 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4FD58AD828CA668900EC4713 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4FD58ADB28CA668900EC4713 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4FD58ADD28CA668900EC4713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FD58AE228CA668900EC4713 /* CHOT ECG ScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CHOT ECG ScannerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FD58AE628CA668900EC4713 /* CHOT_ECG_ScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHOT_ECG_ScannerTests.swift; sourceTree = "<group>"; };
+		4FD58AE828CA668900EC4713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FD58AED28CA668900EC4713 /* CHOT ECG ScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CHOT ECG ScannerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FD58AF128CA668900EC4713 /* CHOT_ECG_ScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHOT_ECG_ScannerUITests.swift; sourceTree = "<group>"; };
+		4FD58AF328CA668900EC4713 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FD58B3B28CA7EC000EC4713 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		4FD58B4228CA7F0E00EC4713 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		4FD58B4428CA843A00EC4713 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4FD58ACE28CA668800EC4713 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FD58ADF28CA668900EC4713 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FD58AEA28CA668900EC4713 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4FD58AC828CA668800EC4713 = {
+			isa = PBXGroup;
+			children = (
+				4FD58AD328CA668800EC4713 /* CHOT ECG Scanner */,
+				4FD58AE528CA668900EC4713 /* CHOT ECG ScannerTests */,
+				4FD58AF028CA668900EC4713 /* CHOT ECG ScannerUITests */,
+				4FD58AD228CA668800EC4713 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4FD58AD228CA668800EC4713 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FD58AD128CA668800EC4713 /* CHOT ECG Scanner.app */,
+				4FD58AE228CA668900EC4713 /* CHOT ECG ScannerTests.xctest */,
+				4FD58AED28CA668900EC4713 /* CHOT ECG ScannerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4FD58AD328CA668800EC4713 /* CHOT ECG Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				4FD58B3F28CA7ED600EC4713 /* Views */,
+				4FD58B3E28CA7ECA00EC4713 /* ViewModels */,
+				4FD58B3D28CA7EC500EC4713 /* Models */,
+				4FD58AD428CA668800EC4713 /* CHOT_ECG_ScannerApp.swift */,
+				4FD58AD828CA668900EC4713 /* Assets.xcassets */,
+				4FD58ADD28CA668900EC4713 /* Info.plist */,
+				4FD58ADA28CA668900EC4713 /* Preview Content */,
+			);
+			path = "CHOT ECG Scanner";
+			sourceTree = "<group>";
+		};
+		4FD58ADA28CA668900EC4713 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4FD58ADB28CA668900EC4713 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4FD58AE528CA668900EC4713 /* CHOT ECG ScannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				4FD58AE628CA668900EC4713 /* CHOT_ECG_ScannerTests.swift */,
+				4FD58AE828CA668900EC4713 /* Info.plist */,
+			);
+			path = "CHOT ECG ScannerTests";
+			sourceTree = "<group>";
+		};
+		4FD58AF028CA668900EC4713 /* CHOT ECG ScannerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4FD58AF128CA668900EC4713 /* CHOT_ECG_ScannerUITests.swift */,
+				4FD58AF328CA668900EC4713 /* Info.plist */,
+			);
+			path = "CHOT ECG ScannerUITests";
+			sourceTree = "<group>";
+		};
+		4FD58B3D28CA7EC500EC4713 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4FD58B3B28CA7EC000EC4713 /* CameraModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4FD58B3E28CA7ECA00EC4713 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4FD58B4228CA7F0E00EC4713 /* CameraManager.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4FD58B3F28CA7ED600EC4713 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4FD58AD628CA668800EC4713 /* ContentView.swift */,
+				4FD58B4428CA843A00EC4713 /* CameraPreview.swift */,
+				4F908A8628CBBD1E00E5D10D /* VideoPreviewOverlay.swift */,
+				4F908A8828CBBD4C00E5D10D /* TakenPhotoOverlay.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4FD58AD028CA668800EC4713 /* CHOT ECG Scanner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FD58AF628CA668900EC4713 /* Build configuration list for PBXNativeTarget "CHOT ECG Scanner" */;
+			buildPhases = (
+				4FD58ACD28CA668800EC4713 /* Sources */,
+				4FD58ACE28CA668800EC4713 /* Frameworks */,
+				4FD58ACF28CA668800EC4713 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CHOT ECG Scanner";
+			productName = "CHOT ECG Scanner";
+			productReference = 4FD58AD128CA668800EC4713 /* CHOT ECG Scanner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4FD58AE128CA668900EC4713 /* CHOT ECG ScannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FD58AF928CA668900EC4713 /* Build configuration list for PBXNativeTarget "CHOT ECG ScannerTests" */;
+			buildPhases = (
+				4FD58ADE28CA668900EC4713 /* Sources */,
+				4FD58ADF28CA668900EC4713 /* Frameworks */,
+				4FD58AE028CA668900EC4713 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FD58AE428CA668900EC4713 /* PBXTargetDependency */,
+			);
+			name = "CHOT ECG ScannerTests";
+			productName = "CHOT ECG ScannerTests";
+			productReference = 4FD58AE228CA668900EC4713 /* CHOT ECG ScannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4FD58AEC28CA668900EC4713 /* CHOT ECG ScannerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FD58AFC28CA668900EC4713 /* Build configuration list for PBXNativeTarget "CHOT ECG ScannerUITests" */;
+			buildPhases = (
+				4FD58AE928CA668900EC4713 /* Sources */,
+				4FD58AEA28CA668900EC4713 /* Frameworks */,
+				4FD58AEB28CA668900EC4713 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4FD58AEF28CA668900EC4713 /* PBXTargetDependency */,
+			);
+			name = "CHOT ECG ScannerUITests";
+			productName = "CHOT ECG ScannerUITests";
+			productReference = 4FD58AED28CA668900EC4713 /* CHOT ECG ScannerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4FD58AC928CA668800EC4713 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					4FD58AD028CA668800EC4713 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					4FD58AE128CA668900EC4713 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 4FD58AD028CA668800EC4713;
+					};
+					4FD58AEC28CA668900EC4713 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 4FD58AD028CA668800EC4713;
+					};
+				};
+			};
+			buildConfigurationList = 4FD58ACC28CA668800EC4713 /* Build configuration list for PBXProject "CHOT ECG Scanner" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4FD58AC828CA668800EC4713;
+			productRefGroup = 4FD58AD228CA668800EC4713 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4FD58AD028CA668800EC4713 /* CHOT ECG Scanner */,
+				4FD58AE128CA668900EC4713 /* CHOT ECG ScannerTests */,
+				4FD58AEC28CA668900EC4713 /* CHOT ECG ScannerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4FD58ACF28CA668800EC4713 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FD58ADC28CA668900EC4713 /* Preview Assets.xcassets in Resources */,
+				4FD58AD928CA668900EC4713 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FD58AE028CA668900EC4713 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FD58AEB28CA668900EC4713 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4FD58ACD28CA668800EC4713 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F908A8928CBBD4C00E5D10D /* TakenPhotoOverlay.swift in Sources */,
+				4FD58B4528CA843A00EC4713 /* CameraPreview.swift in Sources */,
+				4FD58AD728CA668800EC4713 /* ContentView.swift in Sources */,
+				4FD58AD528CA668800EC4713 /* CHOT_ECG_ScannerApp.swift in Sources */,
+				4F908A8728CBBD1E00E5D10D /* VideoPreviewOverlay.swift in Sources */,
+				4FD58B4328CA7F0E00EC4713 /* CameraManager.swift in Sources */,
+				4FD58B3C28CA7EC000EC4713 /* CameraModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FD58ADE28CA668900EC4713 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FD58AE728CA668900EC4713 /* CHOT_ECG_ScannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FD58AE928CA668900EC4713 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FD58AF228CA668900EC4713 /* CHOT_ECG_ScannerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4FD58AE428CA668900EC4713 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FD58AD028CA668800EC4713 /* CHOT ECG Scanner */;
+			targetProxy = 4FD58AE328CA668900EC4713 /* PBXContainerItemProxy */;
+		};
+		4FD58AEF28CA668900EC4713 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4FD58AD028CA668800EC4713 /* CHOT ECG Scanner */;
+			targetProxy = 4FD58AEE28CA668900EC4713 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4FD58AF428CA668900EC4713 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4FD58AF528CA668900EC4713 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4FD58AF728CA668900EC4713 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CHOT ECG Scanner/Preview Content\"";
+				DEVELOPMENT_TEAM = Q9B7SPU3TM;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "CHOT ECG Scanner/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.CAPSTONE-2022.CHOT-ECG-Scanner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4FD58AF828CA668900EC4713 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"CHOT ECG Scanner/Preview Content\"";
+				DEVELOPMENT_TEAM = Q9B7SPU3TM;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "CHOT ECG Scanner/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.CAPSTONE-2022.CHOT-ECG-Scanner";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4FD58AFA28CA668900EC4713 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CHOT ECG ScannerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.CAPSTONE-2022.CHOT-ECG-ScannerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CHOT ECG Scanner.app/CHOT ECG Scanner";
+			};
+			name = Debug;
+		};
+		4FD58AFB28CA668900EC4713 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CHOT ECG ScannerTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.CAPSTONE-2022.CHOT-ECG-ScannerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CHOT ECG Scanner.app/CHOT ECG Scanner";
+			};
+			name = Release;
+		};
+		4FD58AFD28CA668900EC4713 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CHOT ECG ScannerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.CAPSTONE-2022.CHOT-ECG-ScannerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CHOT ECG Scanner";
+			};
+			name = Debug;
+		};
+		4FD58AFE28CA668900EC4713 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CHOT ECG ScannerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.CAPSTONE-2022.CHOT-ECG-ScannerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CHOT ECG Scanner";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FD58ACC28CA668800EC4713 /* Build configuration list for PBXProject "CHOT ECG Scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FD58AF428CA668900EC4713 /* Debug */,
+				4FD58AF528CA668900EC4713 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FD58AF628CA668900EC4713 /* Build configuration list for PBXNativeTarget "CHOT ECG Scanner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FD58AF728CA668900EC4713 /* Debug */,
+				4FD58AF828CA668900EC4713 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FD58AF928CA668900EC4713 /* Build configuration list for PBXNativeTarget "CHOT ECG ScannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FD58AFA28CA668900EC4713 /* Debug */,
+				4FD58AFB28CA668900EC4713 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FD58AFC28CA668900EC4713 /* Build configuration list for PBXNativeTarget "CHOT ECG ScannerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FD58AFD28CA668900EC4713 /* Debug */,
+				4FD58AFE28CA668900EC4713 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4FD58AC928CA668800EC4713 /* Project object */;
+}
