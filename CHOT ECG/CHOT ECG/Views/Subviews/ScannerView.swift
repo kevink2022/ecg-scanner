@@ -10,29 +10,24 @@ import SwiftUI
 
 struct ScannerView: UIViewControllerRepresentable
 {
-    private var coordinator : ScanCoordinator
+    private var coordinator : ECGAppManager
     
-    init(completion: @escaping ([ECGScan]?) -> Void)
+    init(coordinator: ECGAppManager)
     {
-        self.coordinator = ScanCoordinator(completion: completion)
+        self.coordinator = coordinator
     }
     
     // MARK: to Conform to Protocol
     func makeUIViewController(context: UIViewControllerRepresentableContext<ScannerView>) -> VNDocumentCameraViewController
     {
         let viewController = VNDocumentCameraViewController()
-        viewController.delegate = context.coordinator
+        viewController.delegate = self.coordinator
         return viewController
     }
      
     func updateUIViewController(_ uiViewController: VNDocumentCameraViewController, context: UIViewControllerRepresentableContext<ScannerView>)
     {
         
-    }
-     
-    func makeCoordinator() -> ScanCoordinator
-    {
-        return self.coordinator
     }
 }
 

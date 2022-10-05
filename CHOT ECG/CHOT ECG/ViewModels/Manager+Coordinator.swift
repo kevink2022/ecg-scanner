@@ -1,42 +1,49 @@
 //
-//  ScanParser.swift
+//  ScanCoordinator.swift
 //  CHOT ECG
 //
-//  Created by Kevin Kelly on 9/21/22.
+//  Created by Kevin Kelly on 9/22/22.
 //
 
 import Foundation
 import VisionKit
-import Vision
 
-
-final class ScanParser
+extension ECGAppManager: VNDocumentCameraViewControllerDelegate
 {
-    
-    let cameraScan: VNDocumentCameraScan
-    
-    init(cameraScan:VNDocumentCameraScan)
+    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan)
     {
-        self.cameraScan = cameraScan
-        
+        print("parsing")
+        self.parseScan(scan)
+        self.showSheet = false
+    }
+     
+    func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController)
+    {
+        print("cancel")
+    }
+     
+    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error)
+    {
+        print("ERROR: \(error)")
+    }
+}
+
+extension ECGAppManager
+{
+    func addScans(_ scans: [ECGScan]?)
+    {
+        self.model.addScans(scans)
     }
     
-    private let queue = DispatchQueue(label: "scan-codes", qos: .default, attributes: [], autoreleaseFrequency: .workItem)
-    
-    /// I kinda want to take this queue out and make it an input so
-    /// that this whole class could be make a struct, and this
-    /// function could be made static. It definitly isn't needed now,
-    /// but will likely be needed once we start using text recognition
-    /// again for the personal info
-    func parseScan(withCompletionHandler completionHandler: @escaping ([ECGScan]) -> Void)
+    func parseScan(_ rawScans: VNDocumentCameraScan)
     {
         var scans : Array<ECGScan> = []
         
         queue.async
         {
-            let images = (0..<self.cameraScan.pageCount).compactMap
+            let images = (0..<rawScans.pageCount).compactMap
             {
-                self.cameraScan.imageOfPage(at: $0).cgImage
+                rawScans.imageOfPage(at: $0).cgImage
             }
             
             scans = images.map
@@ -72,12 +79,11 @@ final class ScanParser
 //                }
 //            }
 //
-
+            
             DispatchQueue.main.async
             {
-                completionHandler(scans)
+                self.addScans(scans)
             }
         }
-        
     }
 }

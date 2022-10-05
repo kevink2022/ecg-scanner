@@ -7,16 +7,24 @@
 
 import Foundation
 
-final class ECGAppManager : ObservableObject
+final class ECGAppManager : NSObject, ObservableObject
 {
-    @Published var app : ECGApp //= ECGApp(scans: [])
+    @Published var model : ECGApp //= ECGApp(scans: [])
+    @Published var showSheet : Bool = false
     
     // Need to look into more details about how queues work to see if this is the best fit
     // for our application
     let queue = DispatchQueue(label: "scan-codes", qos: .default, attributes: [], autoreleaseFrequency: .workItem)
     
-    init()
+    override init()
     {
-        app = ECGApp(scans: [])
+        model = ECGApp(scans: [])
+        super.init()
     }
+}
+
+
+extension ECGAppManager
+{
+    
 }

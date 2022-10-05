@@ -15,11 +15,11 @@ struct ECGSummaryList: View
     {
         VStack
         {
-            if manager.app.scans.count > 0
+            if manager.model.scans.count > 0
             {
                 List
                 {
-                    ForEach(manager.app.scans)
+                    ForEach(manager.model.scans)
                     {
                         scan in
                         
