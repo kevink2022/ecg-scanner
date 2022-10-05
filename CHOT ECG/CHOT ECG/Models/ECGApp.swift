@@ -9,7 +9,8 @@ import Foundation
 
 struct ECGApp
 {
-    var scans : Array<ECGScan>
+    var scans : [ECGScan]
+    let defaultCrop : [CropPoint] = initDefaultCrop()
 }
 
 extension ECGApp
@@ -17,5 +18,10 @@ extension ECGApp
     mutating func addScans(_ scans: [ECGScan]?)
     {
         self.scans.append(contentsOf: scans ?? [])
+    }
+    
+    static func initDefaultCrop() -> [CropPoint]
+    {
+        []
     }
 }

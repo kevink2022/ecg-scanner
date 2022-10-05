@@ -22,12 +22,15 @@
 		4F6E6EBC28DBF55600CE6FA6 /* ECGDigitalSignal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6EBB28DBF55600CE6FA6 /* ECGDigitalSignal.swift */; };
 		4F6E6EBF28DBF5B800CE6FA6 /* ECGScanInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6EBE28DBF5B800CE6FA6 /* ECGScanInfo.swift */; };
 		4F6E6EC128DBF62700CE6FA6 /* ECGAnalysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6EC028DBF62700CE6FA6 /* ECGAnalysis.swift */; };
-		4F6E6EC628DC97C300CE6FA6 /* Manager+Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6EC528DC97C300CE6FA6 /* Manager+Coordinator.swift */; };
+		4F6E6EC628DC97C300CE6FA6 /* Manager+Vision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6EC528DC97C300CE6FA6 /* Manager+Vision.swift */; };
 		4F6E6EC828DC9B1700CE6FA6 /* ECGAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6EC728DC9B1700CE6FA6 /* ECGAppManager.swift */; };
 		4F6E6ECA28DC9FFE00CE6FA6 /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6EC928DC9FFE00CE6FA6 /* ScanView.swift */; };
 		4F6E6ECC28DD194700CE6FA6 /* ECGApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6ECB28DD194700CE6FA6 /* ECGApp.swift */; };
 		4F6E6ED328E0F6BD00CE6FA6 /* ECGSummaryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6ED228E0F6BD00CE6FA6 /* ECGSummaryList.swift */; };
 		4F6E6ED628E0F88F00CE6FA6 /* NewScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6ED528E0F88F00CE6FA6 /* NewScanButton.swift */; };
+		4FBA4F7E28EE421400E4863C /* CropPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F7D28EE421400E4863C /* CropPoint.swift */; };
+		4FBA4F8128EE45B200E4863C /* CropPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8028EE45B200E4863C /* CropPointView.swift */; };
+		4FBA4F8428EE48B200E4863C /* CropPointCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8328EE48B200E4863C /* CropPointCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,12 +69,15 @@
 		4F6E6EBB28DBF55600CE6FA6 /* ECGDigitalSignal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGDigitalSignal.swift; sourceTree = "<group>"; };
 		4F6E6EBE28DBF5B800CE6FA6 /* ECGScanInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGScanInfo.swift; sourceTree = "<group>"; };
 		4F6E6EC028DBF62700CE6FA6 /* ECGAnalysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGAnalysis.swift; sourceTree = "<group>"; };
-		4F6E6EC528DC97C300CE6FA6 /* Manager+Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Coordinator.swift"; sourceTree = "<group>"; };
+		4F6E6EC528DC97C300CE6FA6 /* Manager+Vision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+Vision.swift"; sourceTree = "<group>"; };
 		4F6E6EC728DC9B1700CE6FA6 /* ECGAppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGAppManager.swift; sourceTree = "<group>"; };
 		4F6E6EC928DC9FFE00CE6FA6 /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		4F6E6ECB28DD194700CE6FA6 /* ECGApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGApp.swift; sourceTree = "<group>"; };
 		4F6E6ED228E0F6BD00CE6FA6 /* ECGSummaryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGSummaryList.swift; sourceTree = "<group>"; };
 		4F6E6ED528E0F88F00CE6FA6 /* NewScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewScanButton.swift; sourceTree = "<group>"; };
+		4FBA4F7D28EE421400E4863C /* CropPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropPoint.swift; sourceTree = "<group>"; };
+		4FBA4F8028EE45B200E4863C /* CropPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropPointView.swift; sourceTree = "<group>"; };
+		4FBA4F8328EE48B200E4863C /* CropPointCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropPointCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,7 @@
 			children = (
 				4F6E6EBA28DBF4FA00CE6FA6 /* DataModels */,
 				4F6E6ECB28DD194700CE6FA6 /* ECGApp.swift */,
+				4FBA4F7D28EE421400E4863C /* CropPoint.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,6 +176,8 @@
 		4F6E6EAE28D9F92100CE6FA6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4FBA4F8228EE48A200E4863C /* Shapes */,
+				4FBA4F7F28EE45A000E4863C /* Objects */,
 				4F6E6ED428E0F88000CE6FA6 /* Buttons */,
 				4F6E6EB128D9F95900CE6FA6 /* Subviews */,
 				4F6E6E8328D9F62000CE6FA6 /* ContentView.swift */,
@@ -179,7 +188,7 @@
 		4F6E6EAF28D9F92E00CE6FA6 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				4F6E6EC528DC97C300CE6FA6 /* Manager+Coordinator.swift */,
+				4F6E6EC528DC97C300CE6FA6 /* Manager+Vision.swift */,
 				4F6E6EC728DC9B1700CE6FA6 /* ECGAppManager.swift */,
 			);
 			path = ViewModels;
@@ -215,6 +224,22 @@
 				4F6E6ED528E0F88F00CE6FA6 /* NewScanButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		4FBA4F7F28EE45A000E4863C /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				4FBA4F8028EE45B200E4863C /* CropPointView.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		4FBA4F8228EE48A200E4863C /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				4FBA4F8328EE48B200E4863C /* CropPointCircle.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,12 +373,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F6E6EC128DBF62700CE6FA6 /* ECGAnalysis.swift in Sources */,
-				4F6E6EC628DC97C300CE6FA6 /* Manager+Coordinator.swift in Sources */,
+				4FBA4F8128EE45B200E4863C /* CropPointView.swift in Sources */,
+				4F6E6EC628DC97C300CE6FA6 /* Manager+Vision.swift in Sources */,
 				4F6E6ECC28DD194700CE6FA6 /* ECGApp.swift in Sources */,
 				4F6E6EAD28D9F63A00CE6FA6 /* ECGSummary.swift in Sources */,
 				4F6E6EB528DBE8D100CE6FA6 /* ScannerView.swift in Sources */,
 				4F6E6ED328E0F6BD00CE6FA6 /* ECGSummaryList.swift in Sources */,
+				4FBA4F7E28EE421400E4863C /* CropPoint.swift in Sources */,
 				4F6E6ED628E0F88F00CE6FA6 /* NewScanButton.swift in Sources */,
+				4FBA4F8428EE48B200E4863C /* CropPointCircle.swift in Sources */,
 				4F6E6EC828DC9B1700CE6FA6 /* ECGAppManager.swift in Sources */,
 				4F6E6ECA28DC9FFE00CE6FA6 /* ScanView.swift in Sources */,
 				4F6E6E8428D9F62000CE6FA6 /* ContentView.swift in Sources */,

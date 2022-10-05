@@ -14,6 +14,7 @@ struct ECGScan : Identifiable
 {
     let personalInfo : PersonalInfo
     let image : CGImage
+    let cropPoint : CropPoint
     let id = UUID()
     
     // static let standard = ECGScan(personalInfo: PersonalInfo.standard, image: CGImage()

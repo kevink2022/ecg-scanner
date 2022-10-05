@@ -30,11 +30,6 @@ extension ECGAppManager: VNDocumentCameraViewControllerDelegate
 
 extension ECGAppManager
 {
-    func addScans(_ scans: [ECGScan]?)
-    {
-        self.model.addScans(scans)
-    }
-    
     func parseScan(_ rawScans: VNDocumentCameraScan)
     {
         var scans : Array<ECGScan> = []
@@ -48,7 +43,7 @@ extension ECGAppManager
             
             scans = images.map
             {
-                ECGScan(personalInfo: .standard, image: $0)
+                ECGScan(personalInfo: .standard, image: $0, cropPoint: CropPoint.zero)
             }
             
             
