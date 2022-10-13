@@ -15,6 +15,7 @@ mypy = ">=0.982"
 pathlib = ">=1.0.1"
 dataclasses = "*"
 pillow = "*"
+gunicorn = ">=20.1.0"
 
 [dev-packages]
 

@@ -1,1 +1,1 @@
-web: sh -c 'cd chot_api && gunicorn app.wsgi'
+web: sh -c 'cd chot_api && gunicorn chot_api.wsgi'
