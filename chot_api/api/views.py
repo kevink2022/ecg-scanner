@@ -26,6 +26,10 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from .serializer import ECGScanSerializer
 
+import os
+from django.conf import settings
+
+
 class ECGScanIn(APIView):
     parser_classes = [MultiPartParser, FormParser]
 
@@ -33,9 +37,9 @@ class ECGScanIn(APIView):
         serializer = ECGScanSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            str_path = f"/Users/ritijjain/Documents/Repos/CHOT-Project{serializer.data['image_url']}"
-            print(str_path)
-            path = Path(str_path)
+            str_path = os.path.abspath(serializer.data['image_url'])
+            path = Path(str_path).resolve()
+            print(path)
             output = models.image_path_to_signal(path)
             print(output)
             return Response(output, status=status.HTTP_200_OK)
