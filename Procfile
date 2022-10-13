@@ -1,0 +1,1 @@
+web: sh -c 'cd chot_api && gunicorn app.wsgi'
