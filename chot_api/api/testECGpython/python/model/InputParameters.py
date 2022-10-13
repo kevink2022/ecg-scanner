@@ -1,7 +1,7 @@
 from typing import Dict
 import dataclasses
 
-from python.model.Lead import LeadId, Lead
+from .Lead import LeadId, Lead
 
 
 @dataclasses.dataclass(frozen=True)

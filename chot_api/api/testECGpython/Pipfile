@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+djangorestframework = ">=3.13.1"
+fbs = "==0.9.0"
+numpy = "*"
+scipy = ">=1.4.1"
+opencv-python-headless = ">=4.4"
+qimage2ndarray = "*"
+mypy = "*"
+pathlib = "*"
+dataclasses = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"

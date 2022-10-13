@@ -1,15 +1,19 @@
 from pathlib import Path
+from signal import signal
 
 import numpy as np
 from numpy.lib.arraysetops import isin
 
-import python.ecgdigitize as ecgdigitize
-import python.ecgdigitize.signal
-import python.ecgdigitize.image
-from python.ecgdigitize import common, visualization
-from python.ecgdigitize.image import ColorImage, Rectangle
+#Ffrom . import ecgdigitize
 
-from python.model.InputParameters import InputParameters
+from api.testECGpython.python import ecgdigitize
+
+# import python.ecgdigitize.signal
+# import python.ecgdigitize.image
+from .ecgdigitize import common, visualization
+from .ecgdigitize.image import ColorImage, Rectangle
+
+from .model.InputParameters import InputParameters
 
 
 def convertECGLeads(inputImage: ColorImage, parameters: InputParameters):

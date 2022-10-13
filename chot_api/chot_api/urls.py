@@ -16,9 +16,9 @@ Including another URLconf
 from urllib import request
 from django.contrib import admin
 from django.urls import path
-from core import views as core_views
+from api import views as api_views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", core_views.index(request), name="index"),
+    path("", api_views.index, name="index"),
 ]
