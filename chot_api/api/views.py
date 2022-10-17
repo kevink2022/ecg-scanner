@@ -12,7 +12,7 @@ from rest_framework import status, viewsets
 
 # Create your views here.
 def index(request):
-    str_path = "/Users/ritijjain/Documents/Repos/CHOT-Project/fullScan.png"
+    str_path = "/app/fullScan.png"
     path = Path(str_path)
     output = models.image_path_to_signal(path)
 
@@ -37,8 +37,8 @@ class ECGScanIn(APIView):
         serializer = ECGScanSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            str_path = os.path.abspath(serializer.data['image_url'])
-            path = Path(str_path).resolve()
+            str_path = f"/app/{os.path.abspath(serializer.data['image_url'])}"
+            path = Path(str_path)
             print(path)
             output = models.image_path_to_signal(path)
             print(output)
