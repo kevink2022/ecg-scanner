@@ -1,15 +1,16 @@
 djangorestframework>=3.13.1
-Django>=4.1.2
-django-heroku==0.3.1
+
+# GUI
+fbs==0.9.0
 
 # Numerical/image
-numpy>=1.23.4
+numpy
 # https://stackoverflow.com/questions/62581504/why-do-i-have-modulenotfounderror-no-module-named-scipy-special-cython-specia
 scipy>=1.4.1
 opencv-python-headless>=4.4
-qimage2ndarray>=1.9.0
+qimage2ndarray
 
 # Helper
-mypy>=0.982
-pathlib>=1.0.1
+mypy
+pathlib
 dataclasses
