@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F3BA88D28EBB66E0057837B /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3BA88C28EBB66E0057837B /* SummaryView.swift */; };
 		4F6E6E8228D9F62000CE6FA6 /* CHOT_ECGApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E8128D9F62000CE6FA6 /* CHOT_ECGApp.swift */; };
-		4F6E6E8428D9F62000CE6FA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E8328D9F62000CE6FA6 /* ContentView.swift */; };
+		4F6E6E8428D9F62000CE6FA6 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E8328D9F62000CE6FA6 /* MainMenu.swift */; };
 		4F6E6E8628D9F62100CE6FA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F6E6E8528D9F62100CE6FA6 /* Assets.xcassets */; };
 		4F6E6E8928D9F62100CE6FA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F6E6E8828D9F62100CE6FA6 /* Preview Assets.xcassets */; };
 		4F6E6E9328D9F62100CE6FA6 /* CHOT_ECGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6E9228D9F62100CE6FA6 /* CHOT_ECGTests.swift */; };
@@ -28,6 +28,8 @@
 		4F6E6ECC28DD194700CE6FA6 /* ECGApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6ECB28DD194700CE6FA6 /* ECGApp.swift */; };
 		4F6E6ED328E0F6BD00CE6FA6 /* ECGSummaryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6ED228E0F6BD00CE6FA6 /* ECGSummaryList.swift */; };
 		4F6E6ED628E0F88F00CE6FA6 /* NewScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6ED528E0F88F00CE6FA6 /* NewScanButton.swift */; };
+		4FA553CF28F850C3001AA5BB /* Manager+CropPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA553CE28F850C3001AA5BB /* Manager+CropPoints.swift */; };
+		4FA553D128F852CF001AA5BB /* CropArrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA553D028F852CF001AA5BB /* CropArrayView.swift */; };
 		4FBA4F7E28EE421400E4863C /* CropPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F7D28EE421400E4863C /* CropPoint.swift */; };
 		4FBA4F8128EE45B200E4863C /* CropPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8028EE45B200E4863C /* CropPointView.swift */; };
 		4FBA4F8428EE48B200E4863C /* CropPointCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8328EE48B200E4863C /* CropPointCircle.swift */; };
@@ -54,7 +56,7 @@
 		4F3BA88C28EBB66E0057837B /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
 		4F6E6E7E28D9F62000CE6FA6 /* CHOT ECG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CHOT ECG.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F6E6E8128D9F62000CE6FA6 /* CHOT_ECGApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHOT_ECGApp.swift; sourceTree = "<group>"; };
-		4F6E6E8328D9F62000CE6FA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4F6E6E8328D9F62000CE6FA6 /* MainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		4F6E6E8528D9F62100CE6FA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F6E6E8828D9F62100CE6FA6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4F6E6E8E28D9F62100CE6FA6 /* CHOT ECGTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CHOT ECGTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +77,8 @@
 		4F6E6ECB28DD194700CE6FA6 /* ECGApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGApp.swift; sourceTree = "<group>"; };
 		4F6E6ED228E0F6BD00CE6FA6 /* ECGSummaryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ECGSummaryList.swift; sourceTree = "<group>"; };
 		4F6E6ED528E0F88F00CE6FA6 /* NewScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewScanButton.swift; sourceTree = "<group>"; };
+		4FA553CE28F850C3001AA5BB /* Manager+CropPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+CropPoints.swift"; sourceTree = "<group>"; };
+		4FA553D028F852CF001AA5BB /* CropArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropArrayView.swift; sourceTree = "<group>"; };
 		4FBA4F7D28EE421400E4863C /* CropPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropPoint.swift; sourceTree = "<group>"; };
 		4FBA4F8028EE45B200E4863C /* CropPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropPointView.swift; sourceTree = "<group>"; };
 		4FBA4F8328EE48B200E4863C /* CropPointCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropPointCircle.swift; sourceTree = "<group>"; };
@@ -128,6 +132,7 @@
 		4F6E6E8028D9F62000CE6FA6 /* CHOT ECG */ = {
 			isa = PBXGroup;
 			children = (
+				4FA553CD28F84F8E001AA5BB /* Networking */,
 				4F6E6E8128D9F62000CE6FA6 /* CHOT_ECGApp.swift */,
 				4F6E6EAB28D9F62800CE6FA6 /* Models */,
 				4F6E6EAF28D9F92E00CE6FA6 /* ViewModels */,
@@ -180,7 +185,7 @@
 				4FBA4F7F28EE45A000E4863C /* Objects */,
 				4F6E6ED428E0F88000CE6FA6 /* Buttons */,
 				4F6E6EB128D9F95900CE6FA6 /* Subviews */,
-				4F6E6E8328D9F62000CE6FA6 /* ContentView.swift */,
+				4F6E6E8328D9F62000CE6FA6 /* MainMenu.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 			children = (
 				4F6E6EC528DC97C300CE6FA6 /* Manager+Vision.swift */,
 				4F6E6EC728DC9B1700CE6FA6 /* ECGAppManager.swift */,
+				4FA553CE28F850C3001AA5BB /* Manager+CropPoints.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 				4F6E6EC928DC9FFE00CE6FA6 /* ScanView.swift */,
 				4F6E6ED228E0F6BD00CE6FA6 /* ECGSummaryList.swift */,
 				4F3BA88C28EBB66E0057837B /* SummaryView.swift */,
+				4FA553D028F852CF001AA5BB /* CropArrayView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -224,6 +231,13 @@
 				4F6E6ED528E0F88F00CE6FA6 /* NewScanButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		4FA553CD28F84F8E001AA5BB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		4FBA4F7F28EE45A000E4863C /* Objects */ = {
@@ -376,6 +390,7 @@
 				4FBA4F8128EE45B200E4863C /* CropPointView.swift in Sources */,
 				4F6E6EC628DC97C300CE6FA6 /* Manager+Vision.swift in Sources */,
 				4F6E6ECC28DD194700CE6FA6 /* ECGApp.swift in Sources */,
+				4FA553D128F852CF001AA5BB /* CropArrayView.swift in Sources */,
 				4F6E6EAD28D9F63A00CE6FA6 /* ECGSummary.swift in Sources */,
 				4F6E6EB528DBE8D100CE6FA6 /* ScannerView.swift in Sources */,
 				4F6E6ED328E0F6BD00CE6FA6 /* ECGSummaryList.swift in Sources */,
@@ -384,8 +399,9 @@
 				4FBA4F8428EE48B200E4863C /* CropPointCircle.swift in Sources */,
 				4F6E6EC828DC9B1700CE6FA6 /* ECGAppManager.swift in Sources */,
 				4F6E6ECA28DC9FFE00CE6FA6 /* ScanView.swift in Sources */,
-				4F6E6E8428D9F62000CE6FA6 /* ContentView.swift in Sources */,
+				4F6E6E8428D9F62000CE6FA6 /* MainMenu.swift in Sources */,
 				4F3BA88D28EBB66E0057837B /* SummaryView.swift in Sources */,
+				4FA553CF28F850C3001AA5BB /* Manager+CropPoints.swift in Sources */,
 				4F6E6EB728DBF46900CE6FA6 /* ECGScan.swift in Sources */,
 				4F6E6EBF28DBF5B800CE6FA6 /* ECGScanInfo.swift in Sources */,
 				4F6E6E8228D9F62000CE6FA6 /* CHOT_ECGApp.swift in Sources */,

@@ -43,7 +43,7 @@ extension ECGAppManager
             
             scans = images.map
             {
-                ECGScan(personalInfo: .standard, image: $0, cropPoint: CropPoint.zero)
+                ECGScan(personalInfo: .standard, image: $0, cropPoints: [])
             }
             
             

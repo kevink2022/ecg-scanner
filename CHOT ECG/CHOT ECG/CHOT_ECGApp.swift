@@ -16,7 +16,7 @@ struct CHOT_ECGApp: App
     {
         WindowGroup
         {
-            ContentView()
+            MainMenu()
                 .environmentObject(manager)
         }
     }

@@ -11,6 +11,7 @@ struct CropPointView: View
 {
     @State var scale  = 1.0
     @State var offset = CGSize.zero
+    @Binding var point : CropPoint
     
     var body: some View
     {
@@ -38,7 +39,10 @@ struct CropPointView: View
             
             CropPointCircle()
                 .scaleEffect(scale)
-                .offset(offset)
+                .position(
+                    x: point.x,
+                    y: point.y
+                )
                 .gesture(move)
         }
     }
@@ -48,6 +52,6 @@ struct CropPointView_Previews: PreviewProvider
 {
     static var previews: some View
     {
-        CropPointView()
+        CropPointView(point: .constant(CropPoint.zero))
     }
 }

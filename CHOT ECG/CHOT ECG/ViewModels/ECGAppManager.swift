@@ -11,6 +11,7 @@ class ECGAppManager : NSObject, ObservableObject
 {
     @Published var model : ECGApp //= ECGApp(scans: [])
     @Published var showSheet : Bool = false
+    @Published var cropPoints : [CropPoint]
     
     // Need to look into more details about how queues work to see if this is the best fit
     // for our application
@@ -24,6 +25,8 @@ class ECGAppManager : NSObject, ObservableObject
     override init()
     {
         model = ECGApp(scans: [])
+        cropPoints = ECGAppManager.initCropPoints()
+
         super.init()
     }
     
@@ -33,4 +36,9 @@ class ECGAppManager : NSObject, ObservableObject
     {
         self.model.addScans(scans)
     }
+    
+    
 }
+
+
+

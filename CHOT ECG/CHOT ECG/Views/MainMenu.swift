@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View
+struct MainMenu: View
 {
     @EnvironmentObject var manager : ECGAppManager
     
@@ -48,7 +48,7 @@ struct ViewConstants
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        MainMenu()
             .environmentObject(ECGAppManager())
     }
 }

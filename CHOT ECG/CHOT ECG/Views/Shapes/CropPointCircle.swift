@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CropPointCircle: View
 {
+    //@Binding var point : CropPoint
+    
     var body: some View
     {
         ZStack
@@ -27,6 +29,6 @@ struct CropPointCircle_Previews: PreviewProvider
 {
     static var previews: some View
     {
-        CropPointCircle()
+        CropPointCircle()//point: .constant(CropPoint.zero))
     }
 }
