@@ -16,12 +16,12 @@ struct CropPointCircle: View
         ZStack
         {
             Circle()
-                .opacity(ViewConstants.cropPoint.opacity)
+                .opacity(ViewConstants.CropPoint.opacity)
             
             Circle()
                 .stroke(style: StrokeStyle())
         }
-        .frame(height: ViewConstants.cropPoint.diameter)
+        .frame(height: ViewConstants.CropPoint.diameter)
     }
 }
 
