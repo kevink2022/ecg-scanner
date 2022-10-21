@@ -15,11 +15,17 @@ struct ScanView: View
     {
         VStack
         {
-            Text(scan.personalInfo.fullName)
+            DropDownView(title: "Personal Info")
+            {
+                Text(scan.personalInfo.fullName)
+            }
             
-            Image(scan.image, scale: 1, label: Text(scan.personalInfo.lastName))
-                .resizable()
-                .aspectRatio(contentMode: .fit)
+            DropDownView(title: "Scan Image")
+            {
+                Image(scan.image, scale: 1, label: Text(scan.personalInfo.lastName))
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
         }
     }
 }

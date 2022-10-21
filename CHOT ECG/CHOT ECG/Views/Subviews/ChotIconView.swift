@@ -11,7 +11,7 @@ struct ChotIconView: View
 {
     var body: some View
     {
-        Image("chot_icon_long")
+        Image("chot_long_icon")
             .resizable()
             .aspectRatio(contentMode: .fill)
             .frame(height: 200)
