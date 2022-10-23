@@ -12,6 +12,7 @@ class ECGAppManager : NSObject, ObservableObject
     @Published var model : ECGApp //= ECGApp(scans: [])
     @Published var showSheet : Bool = false
     @Published var cropPoints : [CropPoint]
+    @Published var path : [MainMenuOptions] = []
     
     // Need to look into more details about how queues work to see if this is the best fit
     // for our application
