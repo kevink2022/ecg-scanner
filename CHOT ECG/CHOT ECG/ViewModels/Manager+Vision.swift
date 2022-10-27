@@ -12,14 +12,15 @@ extension ECGAppManager: VNDocumentCameraViewControllerDelegate
 {
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan)
     {
-        print("parsing")
         self.parseScan(scan)
         self.showSheet = false
+        self.path.removeAll()
+
     }
      
     func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController)
     {
-        print("cancel")
+        self.path.removeAll()
     }
      
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error)
@@ -43,7 +44,7 @@ extension ECGAppManager
             
             scans = images.map
             {
-                ECGScan(personalInfo: .standard, image: $0, cropPoint: CropPoint.zero)
+                ECGScan(personalInfo: .standard, image: $0, cropPoints: [])
             }
             
             

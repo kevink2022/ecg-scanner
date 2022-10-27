@@ -21,4 +21,15 @@ struct ScanInfo
     let QTC : Int
     
     let notes : Array<String>
+    
+//    static let standard = ScanInfo(
+//        date: <#T##Date#>,
+//        device: <#T##String#>,
+//        ventRate: <#T##Int#>,
+//        PR_Interval: <#T##Int#>,
+//        QRS_Duration: <#T##Int#>,
+//        QT: <#T##Int#>,
+//        QTC: <#T##Int#>,
+//        notes: <#T##Array<String>#>
+//    )
 }

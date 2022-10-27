@@ -25,3 +25,11 @@ extension ECGApp
         []
     }
 }
+
+
+enum MainMenuOptions : String, CaseIterable, Identifiable
+{
+    case new, crop, view
+    
+    var id : String { self.rawValue }
+}
