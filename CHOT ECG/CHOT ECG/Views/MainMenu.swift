@@ -10,13 +10,6 @@ import SwiftUI
 struct MainMenu: View
 {
     @EnvironmentObject var manager : ECGAppManager
-    
-    typealias C = ViewConstants
-    typealias ButtonC = C.MainMenuButton
-    typealias NewScan   = ButtonC.NewScan
-    typealias CropScan  = ButtonC.CropScan
-    typealias ViewScans = ButtonC.ViewScans
-    
     typealias Options = MainMenuOptions
     
     var body: some View

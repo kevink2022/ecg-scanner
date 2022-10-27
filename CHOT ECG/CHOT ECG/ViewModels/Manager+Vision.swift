@@ -12,20 +12,15 @@ extension ECGAppManager: VNDocumentCameraViewControllerDelegate
 {
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFinishWith scan: VNDocumentCameraScan)
     {
-        print("parsing")
         self.parseScan(scan)
         self.showSheet = false
-        print(self.path.count)
         self.path.removeAll()
 
     }
      
     func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController)
     {
-        print("cancel")
-        print(self.path.count)
         self.path.removeAll()
-
     }
      
     func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error)

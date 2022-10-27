@@ -30,6 +30,8 @@
 		4F6E6ED628E0F88F00CE6FA6 /* NewScanButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6E6ED528E0F88F00CE6FA6 /* NewScanButton.swift */; };
 		4F73872B29033C8D009B5144 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73872A29033C8D009B5144 /* DropDownView.swift */; };
 		4F73872D29034055009B5144 /* ViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73872C29034055009B5144 /* ViewConstants.swift */; };
+		4F73872F29060F00009B5144 /* PersonalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73872E29060F00009B5144 /* PersonalInfoView.swift */; };
+		4F73873129063861009B5144 /* ScanImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F73873029063861009B5144 /* ScanImageView.swift */; };
 		4FA553CF28F850C3001AA5BB /* Manager+CropPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA553CE28F850C3001AA5BB /* Manager+CropPoints.swift */; };
 		4FA553D128F852CF001AA5BB /* CropArrayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA553D028F852CF001AA5BB /* CropArrayView.swift */; };
 		4FB9F8A928FEE88200C49280 /* MainMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB9F8A828FEE88200C49280 /* MainMenuButton.swift */; };
@@ -83,6 +85,8 @@
 		4F6E6ED528E0F88F00CE6FA6 /* NewScanButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewScanButton.swift; sourceTree = "<group>"; };
 		4F73872A29033C8D009B5144 /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		4F73872C29034055009B5144 /* ViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConstants.swift; sourceTree = "<group>"; };
+		4F73872E29060F00009B5144 /* PersonalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoView.swift; sourceTree = "<group>"; };
+		4F73873029063861009B5144 /* ScanImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanImageView.swift; sourceTree = "<group>"; };
 		4FA553CE28F850C3001AA5BB /* Manager+CropPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Manager+CropPoints.swift"; sourceTree = "<group>"; };
 		4FA553D028F852CF001AA5BB /* CropArrayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropArrayView.swift; sourceTree = "<group>"; };
 		4FB9F8A828FEE88200C49280 /* MainMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuButton.swift; sourceTree = "<group>"; };
@@ -219,6 +223,8 @@
 				4FA553D028F852CF001AA5BB /* CropArrayView.swift */,
 				4FB9F8AB28FF607500C49280 /* ChotIconView.swift */,
 				4F73872A29033C8D009B5144 /* DropDownView.swift */,
+				4F73872E29060F00009B5144 /* PersonalInfoView.swift */,
+				4F73873029063861009B5144 /* ScanImageView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -408,12 +414,14 @@
 				4F6E6EAD28D9F63A00CE6FA6 /* ECGSummary.swift in Sources */,
 				4FB9F8AC28FF607500C49280 /* ChotIconView.swift in Sources */,
 				4F6E6EB528DBE8D100CE6FA6 /* ScannerView.swift in Sources */,
+				4F73872F29060F00009B5144 /* PersonalInfoView.swift in Sources */,
 				4F73872D29034055009B5144 /* ViewConstants.swift in Sources */,
 				4F6E6ED328E0F6BD00CE6FA6 /* ECGSummaryList.swift in Sources */,
 				4FBA4F7E28EE421400E4863C /* CropPoint.swift in Sources */,
 				4F6E6ED628E0F88F00CE6FA6 /* NewScanButton.swift in Sources */,
 				4FBA4F8428EE48B200E4863C /* CropPointCircle.swift in Sources */,
 				4F6E6EC828DC9B1700CE6FA6 /* ECGAppManager.swift in Sources */,
+				4F73873129063861009B5144 /* ScanImageView.swift in Sources */,
 				4F6E6ECA28DC9FFE00CE6FA6 /* ScanView.swift in Sources */,
 				4F6E6E8428D9F62000CE6FA6 /* MainMenu.swift in Sources */,
 				4F3BA88D28EBB66E0057837B /* SummaryView.swift in Sources */,

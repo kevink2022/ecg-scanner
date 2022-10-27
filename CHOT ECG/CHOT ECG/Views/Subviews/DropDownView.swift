@@ -11,12 +11,12 @@ struct DropDownView<Content: View>: View
 {
     typealias C = ViewConstants.DropDownView
     let title : String
-    @ViewBuilder var content : Content
+    var content : () -> Content
     @State var showContent : Bool = false
     
     var body: some View
     {
-        VStack
+        VStack(alignment: .leading)
         {
             Button
             {
@@ -37,9 +37,17 @@ struct DropDownView<Content: View>: View
             
             if showContent
             {
-                content
+                HStack
+                {
+                    // To offset the drop down content
+                    Image(systemName: C.shownLabel)
+                        .opacity(0)
+                    
+                    content()
+                }
             }
         }
+        .padding(C.outerPadding)
     }
 }
 

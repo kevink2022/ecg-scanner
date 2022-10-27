@@ -61,6 +61,8 @@ struct ViewConstants
         static let hiddenLabel = "chevron.right.circle"
         static let shownLabel = "chevron.down.circle"
         static let titleFont = Font.system(.title, design: .default, weight: .bold)
+        static let innerPadding : CGFloat = -2
+        static let outerPadding : CGFloat = 5
     }
 
 }

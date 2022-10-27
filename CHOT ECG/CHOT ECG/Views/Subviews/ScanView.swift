@@ -17,14 +17,12 @@ struct ScanView: View
         {
             DropDownView(title: "Personal Info")
             {
-                Text(scan.personalInfo.fullName)
+                PersonalInfoView(info: scan.personalInfo)
             }
             
             DropDownView(title: "Scan Image")
             {
-                Image(scan.image, scale: 1, label: Text(scan.personalInfo.lastName))
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                ScanImageView(image: scan.image)
             }
         }
     }
