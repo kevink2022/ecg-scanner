@@ -20,7 +20,8 @@ def image_path_to_signal(path):
     for key in extractedSignals:
         extractedSignals[key] = list(extractedSignals[key])
 
-    json_object = json.dumps(extractedSignals)
+    return extractedSignals
+    # json_object = json.dumps(extractedSignals)
     
         
     # out_json = json.dumps(outArray)
