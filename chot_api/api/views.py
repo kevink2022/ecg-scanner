@@ -37,8 +37,7 @@ class ECGScanIn(APIView):
         serializer = ECGScanSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            # str_path = f"/app/{os.path.abspath(serializer.data['image_url'])}"
-            str_path = "/Users/ritijjain/Documents/Repos/CHOT-Project/fullScan.png"
+            str_path = f"/app/{os.path.abspath(serializer.data['image_url'])}"
             path = Path(str_path)
             # print(path)
             output = models.image_path_to_signal(path)
