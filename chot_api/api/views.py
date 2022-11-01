@@ -6,7 +6,7 @@ import json
 from .testECGpython import models
 
 from rest_framework import status, viewsets
-
+import json
 
 
 
@@ -37,11 +37,39 @@ class ECGScanIn(APIView):
         serializer = ECGScanSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            str_path = f"/app/{os.path.abspath(serializer.data['image_url'])}"
+            # str_path = f"/app/{os.path.abspath(serializer.data['image_url'])}"
+            str_path = "/Users/ritijjain/Documents/Repos/CHOT-Project/fullScan.png"
             path = Path(str_path)
-            print(path)
+            # print(path)
             output = models.image_path_to_signal(path)
-            print(output)
+            # print(output)
+
+
+            for key in output.keys():
+                for i, element in enumerate(output[key]):
+                    if str(element) == "nan":
+                        print(str(element))
+                        output[key][i] = output[key][i+2]
+                        # pos = array.index(num)
+                        # num = array[pos+ 1]
+
+
+            # output = json.loads(json.dumps(output, allow_nan=False))
+            # print("hello")
+            # for i in range(0, 11):
+            #     len_of_i = len(output[i])
+            #     print(output[str(i)])
+            #     for j in range(0, len_of_i):
+            #         print(output[str(i)][j])
+            #         try:
+            #             output[str(i)][j] == "nan"
+            #         except:
+            #             output[str(i)][j] = output[str(i)][j+1]
+                
+
             return JsonResponse(output, status=status.HTTP_200_OK)
         else:
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+
