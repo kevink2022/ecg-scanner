@@ -35,6 +35,7 @@ class ECGScanIn(APIView):
 
     def post(self, request, format=None):
         serializer = ECGScanSerializer(data=request.data)
+        print(request.data)
         if serializer.is_valid():
             serializer.save()
             str_path = f"/app/{os.path.abspath(serializer.data['image_url'])}"
