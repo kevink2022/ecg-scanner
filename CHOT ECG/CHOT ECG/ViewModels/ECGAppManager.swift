@@ -39,6 +39,32 @@ class ECGAppManager : NSObject, ObservableObject
     }
     
     
+    func sendImageData(data: Data)
+    {
+        let URLsession = URLSession.shared
+        let url = URL(string: "https://chotbackend.herokuapp.com/api/ecg-in/")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        //request.setValue("file", forHTTPHeaderField: "Content-Type")
+        
+        
+        let task = URLsession.uploadTask(with: request, from: data) { data, response, error in
+            
+            guard error == nil else {print("ERROR: \(error)"); return}
+
+            print ("RESPOSNE: \(response)")
+
+            guard let response = response as? HTTPURLResponse,
+                  (200...299).contains(response.statusCode) else {
+                return
+            }
+
+            print(data)
+        }
+        
+        task.resume()
+    }
+    
 }
 
 

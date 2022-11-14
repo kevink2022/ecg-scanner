@@ -42,6 +42,22 @@ extension ECGAppManager
                 rawScans.imageOfPage(at: $0).cgImage
             }
             
+            let imageData = (0..<rawScans.pageCount).compactMap
+            {
+                if let data = rawScans.imageOfPage(at: $0).pngData() {
+//                    let filename = self.getDocumentsDirectory().appendingPathComponent("copy.png")
+//                    do {try data.write(to: filename)} catch {print("couldn't save image")}
+//                    print(filename)
+//                    return filename
+                    return data
+                }
+                
+                return nil
+            }
+            
+            imageData.forEach { data in self.sendImageData(data: data) }
+            
+            
             scans = images.map
             {
                 ECGScan(personalInfo: .standard, image: $0, cropPoints: [])
@@ -81,5 +97,10 @@ extension ECGAppManager
                 self.addScans(scans)
             }
         }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
     }
 }
