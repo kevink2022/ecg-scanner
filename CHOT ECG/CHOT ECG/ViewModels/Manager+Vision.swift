@@ -7,6 +7,7 @@
 
 import Foundation
 import VisionKit
+import Vision
 
 extension ECGAppManager: VNDocumentCameraViewControllerDelegate
 {
@@ -55,42 +56,44 @@ extension ECGAppManager
                 return nil
             }
             
-            imageData.forEach { data in self.sendImageData(data: data) }
+            //imageData.forEach { data in self.sendImageData(data: data) }
             
             
             scans = images.map
             {
-                ECGScan(personalInfo: .standard, image: $0, cropPoints: [])
+                ECGScan(personalInfo: .standard, image: $0)
             }
             
-            
-//            // For getting text out of images, will need to look into this for personal and scan info
-//            let imagesAndRequests = images.map
-//            {
-//                (image: $0, request:VNRecognizeTextRequest())
-//            }
-//
-//            let textPerPage = imagesAndRequests.map
-//            {
-//                image,request->String in
-//
-//                let handler = VNImageRequestHandler(cgImage: image, options: [:])
-//
-//                do
-//                {
-//                    try handler.perform([request])
-//
-//                    guard let observations = request.results as? [VNRecognizedTextObservation] else{return ""}
-//
-//                    return observations.compactMap({$0.topCandidates(1).first?.string}).joined(separator: "\n")
-//                }
-//                catch
-//                {
-//                    print(error)
-//                    return ""
-//                }
-//            }
-//
+            // For getting text out of images, will need to look into this for personal and scan info
+            let imagesAndRequests = images.map
+            {
+                (image: $0, request:VNRecognizeTextRequest())
+            }
+
+            let textPerPage = imagesAndRequests.map
+            {
+                image,request->String in
+
+                let handler = VNImageRequestHandler(cgImage: image, options: [:])
+
+                do
+                {
+                    try handler.perform([request])
+
+                    guard let observations = request.results as? [VNRecognizedTextObservation]
+                    else {print("OCR ERROR: nil"); return ""}
+
+                    let text = observations.compactMap({$0.topCandidates(1).first?.string}).joined(separator: "\n") + "\n==================== END OF SCAN ===================="
+                    
+                    print(text)
+                    return text
+                }
+                catch
+                {
+                    print("OCR ERROR: \(error)")
+                    return ""
+                }
+            }
             
             DispatchQueue.main.async
             {

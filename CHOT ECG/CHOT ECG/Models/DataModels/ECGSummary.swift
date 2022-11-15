@@ -13,7 +13,7 @@ struct ECGSummary
 {
     let person : PersonalInfo
     let scanInfo : ScanInfo
-    let scanImage : Data
+    let scanImage : CGImage
     let digitalSignal : ECGSignal
     let analysis : ECGAnalysis
     

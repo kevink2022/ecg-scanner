@@ -10,26 +10,23 @@ import Foundation
 /// This will be the non-personal info about the time and place of the scan, as well as patient vitals
 struct ScanInfo
 {
-    let date : Date
-    let device : String
-    let ventRate : Int
-    let PR_Interval : Int
-    let QRS_Duration : Int
+    // General Info
+    var time : String?
+    var technition : String?
+    var test_ind : String?
+    var referred_by : String?
+    var confirmed_by : String?
     
+    // DATA
+    var ventRate : Int?
+    var PR_Interval : Int?
+    var QRS_Duration : Int?
     // QT/QTc, may want to create custom struct for this case
-    let QT : Int
-    let QTC : Int
+    var QT : Int?
+    var QTC : Int?
     
-    let notes : Array<String>
+    var notes : Array<String>
     
-//    static let standard = ScanInfo(
-//        date: <#T##Date#>,
-//        device: <#T##String#>,
-//        ventRate: <#T##Int#>,
-//        PR_Interval: <#T##Int#>,
-//        QRS_Duration: <#T##Int#>,
-//        QT: <#T##Int#>,
-//        QTC: <#T##Int#>,
-//        notes: <#T##Array<String>#>
-//    )
+    static let empty = ScanInfo(notes: [])
 }
+
