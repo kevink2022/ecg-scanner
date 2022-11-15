@@ -14,3 +14,4 @@ def upload_to(instance, filename):
 class ECGScan(models.Model):
     image_url = models.ImageField(upload_to=upload_to, blank=True, null=True)
     data = models.TextField(blank=True, null=True)
+    img_binary = models.BinaryField(blank=True, null=True)
