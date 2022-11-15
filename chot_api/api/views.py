@@ -35,7 +35,6 @@ class ECGScanIn(APIView):
 
     def post(self, request, format=None):
         serializer = ECGScanSerializer(data=request.data)
-        print(request.data.META)
         if serializer.is_valid():
 
             img_binary = serializer.data['img_binary']
