@@ -144,7 +144,6 @@
 		4F6E6E8028D9F62000CE6FA6 /* CHOT ECG */ = {
 			isa = PBXGroup;
 			children = (
-				4FA553CD28F84F8E001AA5BB /* Networking */,
 				4F6E6E8128D9F62000CE6FA6 /* CHOT_ECGApp.swift */,
 				4F6E6EAB28D9F62800CE6FA6 /* Models */,
 				4F6E6EAF28D9F92E00CE6FA6 /* ViewModels */,
@@ -249,13 +248,6 @@
 				4FB9F8A828FEE88200C49280 /* MainMenuButton.swift */,
 			);
 			path = Buttons;
-			sourceTree = "<group>";
-		};
-		4FA553CD28F84F8E001AA5BB /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		4FBA4F7F28EE45A000E4863C /* Objects */ = {
