@@ -4,4 +4,4 @@ from .models import ECGScan
 class ECGScanSerializer(serializers.ModelSerializer):
     class Meta:
         model = ECGScan
-        fields = ['id', 'data', 'image_url', 'img_binary']
+        fields = ['id', 'data', 'image_url', 'img_binary', 'img_base64']
