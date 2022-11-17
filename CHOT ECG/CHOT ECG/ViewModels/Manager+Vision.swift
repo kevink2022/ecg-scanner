@@ -56,8 +56,38 @@ extension ECGAppManager
                 return nil
             }
             
-            //imageData.forEach { data in self.sendImageData(data: data) }
+//            imageData.forEach
+//            {
+//                let filename = self.getDocumentsDirectory().appendingPathComponent("image.png")
+//                do {try $0.write(to: filename)}
+//                catch {print("file wrtie failed")}
+//            }
+//
+//
+//
+//            imageData.forEach {self.sendImageData(data: $0)}
             
+            let send = imageData.map { _ in SendData(img_binary: "test_Data".data(using: .utf8)!) }
+            
+            let encoder = JSONEncoder()
+
+            let encoded = send.compactMap
+            {
+                do
+                {
+                    let json = try encoder.encode($0)
+                    return json
+                }
+                catch
+                {
+                    print("%%%%%%%%%%%%%%%%%%% ENCODING ERROR %%%%%%%%%%%%%%%%%%%")
+                    return Data()
+                }
+            }
+            
+            //encoded.forEach { data in self.sendImageData(data: data) }
+            imageData.forEach { data in self.sendImageData(data: data) }
+            //imageData.forEach { _ in self.sendImageData(data: "test_Data".data(using: .utf8)!) }
             
             scans = images.map
             {
@@ -85,7 +115,7 @@ extension ECGAppManager
 
                     let text = observations.compactMap({$0.topCandidates(1).first?.string}).joined(separator: "\n") + "\n==================== END OF SCAN ===================="
                     
-                    print(text)
+                    //print(text)
                     return text
                 }
                 catch
@@ -105,5 +135,17 @@ extension ECGAppManager
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]
+    }
+}
+
+
+struct SendData : Codable
+{
+    let img_binary : Data
+    
+    
+    enum CodingKeys : String, CodingKey
+    {
+        case img_binary = "img_binary"
     }
 }

@@ -45,21 +45,49 @@ class ECGAppManager : NSObject, ObservableObject
         let url = URL(string: "https://chotbackend.herokuapp.com/api/ecg-in/")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        //request.setValue("file", forHTTPHeaderField: "Content-Type")
+        //request.setValue("multipart/form-data", forHTTPHeaderField: "Content-Type")
         
-        
-        let task = URLsession.uploadTask(with: request, from: data) { data, response, error in
-            
+//        let path = self.getDocumentsDirectory().appendingPathExtension("image.png")
+//        print(path.absoluteString)
+//        request.setValue(path.lastPathComponent, forHTTPHeaderField: "image_url")
+//        print(path.lastPathComponent)
+//
+//        let task = URLsession.uploadTask(with: request, fromFile: path) { data, response, error in
+//
+//            guard error == nil else {print("ERROR: \(error)"); return}
+//
+////            print ("RESPOSNE: \(response)")
+//
+////            guard let response = response as? HTTPURLResponse,
+////                  (200...299).contains(response.statusCode) else {
+////                return
+////            }
+//
+////            print(data)
+////            print(data! as NSData)
+//            print(String(decoding: data!, as: UTF8.self))
+//        }
+
+        let key = "img_base64=".data(using: .utf8)
+
+        let send = (key! + data.base64EncodedData())
+
+
+        let task = URLsession.uploadTask(with: request, from: send) { data, response, error in
+
             guard error == nil else {print("ERROR: \(error)"); return}
 
             print ("RESPOSNE: \(response)")
 
-            guard let response = response as? HTTPURLResponse,
-                  (200...299).contains(response.statusCode) else {
-                return
-            }
+//            guard let response = response as? HTTPURLResponse,
+//                  (200...299).contains(response.statusCode) else {
+//                return
+//            }
 
             print(data)
+            print(data! as NSData)
+            print(String(decoding: data!, as: UTF8.self))
+
         }
         
         task.resume()

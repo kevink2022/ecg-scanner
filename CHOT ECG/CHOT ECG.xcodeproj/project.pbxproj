@@ -39,6 +39,8 @@
 		4FBA4F7E28EE421400E4863C /* CropPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F7D28EE421400E4863C /* CropPoint.swift */; };
 		4FBA4F8128EE45B200E4863C /* CropPointView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8028EE45B200E4863C /* CropPointView.swift */; };
 		4FBA4F8428EE48B200E4863C /* CropPointCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA4F8328EE48B200E4863C /* CropPointCircle.swift */; };
+		4FECA2852923EA66003EA394 /* html.html in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2842923EA66003EA394 /* html.html */; };
+		4FECA2872923F027003EA394 /* html2.html in Resources */ = {isa = PBXBuildFile; fileRef = 4FECA2862923F027003EA394 /* html2.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		4FBA4F7D28EE421400E4863C /* CropPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropPoint.swift; sourceTree = "<group>"; };
 		4FBA4F8028EE45B200E4863C /* CropPointView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropPointView.swift; sourceTree = "<group>"; };
 		4FBA4F8328EE48B200E4863C /* CropPointCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropPointCircle.swift; sourceTree = "<group>"; };
+		4FECA2842923EA66003EA394 /* html.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = html.html; sourceTree = "<group>"; };
+		4FECA2862923F027003EA394 /* html2.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = html2.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,8 @@
 				4F6E6EBA28DBF4FA00CE6FA6 /* DataModels */,
 				4F6E6ECB28DD194700CE6FA6 /* ECGApp.swift */,
 				4FBA4F7D28EE421400E4863C /* CropPoint.swift */,
+				4FECA2842923EA66003EA394 /* html.html */,
+				4FECA2862923F027003EA394 /* html2.html */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -378,7 +384,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FECA2872923F027003EA394 /* html2.html in Resources */,
 				4F6E6E8928D9F62100CE6FA6 /* Preview Assets.xcassets in Resources */,
+				4FECA2852923EA66003EA394 /* html.html in Resources */,
 				4F6E6E8628D9F62100CE6FA6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

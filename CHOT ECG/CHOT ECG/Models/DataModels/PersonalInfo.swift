@@ -30,5 +30,29 @@ struct PersonalInfo
 
 extension PersonalInfo
 {
-    var fullName : String { "\(self.firstName) \(self.lastName)"}
+    var fullName : String?
+    {
+        var name = ""
+        
+        if let first = self.firstName
+        {
+            name += first
+        }
+        
+        name += " "
+        
+        if let last = self.lastName
+        {
+            name += last
+        }
+        
+        if name == " "
+        {
+            return nil
+        }
+        else
+        {
+            return name
+        }
+    }
 }
