@@ -7,6 +7,7 @@ from .testECGpython import models
 
 from rest_framework import status, viewsets
 import json
+import base64
 
 
 
@@ -28,6 +29,8 @@ from .serializer import ECGScanSerializer
 
 import os
 from django.conf import settings
+from django.core.files.base import ContentFile
+
 
 
 class ECGScanIn(APIView):
@@ -37,17 +40,18 @@ class ECGScanIn(APIView):
         serializer = ECGScanSerializer(data=request.data)
         if serializer.is_valid():
 
-            img_binary = serializer.data['img_binary']
-            filename = f"/app/media/scans/{serializer.data['id']}.png"
+            instance = serializer.save() # Save all data
+            data = instance.img_base64 # base64 data
 
-            outfile = open(filename, "wb")
+            format, imgstr = data.split(';base64,')
+            ext = format.split('/')[-1] 
+            data = ContentFile(base64.b64decode(imgstr), name='temp.' + ext)
+            instance.image = data
+            instance.img_base64 = ''
+            instance.save()
 
-            outfile.write(img_binary)
-
-            outfile.close()
-
-            # str_path = f"/app/{os.path.abspath(serializer.data['image_url'])}"
-            path = Path(filename)
+            str_path = f"/app/{instance.image_url}"
+            path = Path(str_path)
             # print(path)
             output = models.image_path_to_signal(path)
             # # print(output)
