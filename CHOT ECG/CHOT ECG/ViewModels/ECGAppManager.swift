@@ -68,10 +68,12 @@ class ECGAppManager : NSObject, ObservableObject
 //            print(String(decoding: data!, as: UTF8.self))
 //        }
 
-        let key = "img_base64=".data(using: .utf8)
+        let key = "img_base64=data:image/png;base64,".data(using: .utf8)
+        
+        let base = data.base64EncodedData().base64EncodedData()
 
-        let send = (key! + data.base64EncodedData())
-
+        let send = (key! + base)
+        
 
         let task = URLsession.uploadTask(with: request, from: send) { data, response, error in
 
