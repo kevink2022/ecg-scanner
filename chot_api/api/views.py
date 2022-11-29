@@ -48,7 +48,7 @@ class ECGScanIn(APIView):
             data = ContentFile(base64.b64decode(imgstr), name='temp.' + ext)
             instance.image = data
             instance.img_base64 = ''
-            instance.save()
+            #instance.save()
 
             str_path = f"/app/{instance.image_url}"
             path = Path(str_path)
@@ -66,17 +66,6 @@ class ECGScanIn(APIView):
                         # num = array[pos+ 1]
 
 
-            # output = json.loads(json.dumps(output, allow_nan=False))
-            # print("hello")
-            # for i in range(0, 11):
-            #     len_of_i = len(output[i])
-            #     print(output[str(i)])
-            #     for j in range(0, len_of_i):
-            #         print(output[str(i)][j])
-            #         try:
-            #             output[str(i)][j] == "nan"
-            #         except:
-            #             output[str(i)][j] = output[str(i)][j+1]
                 
 
             return JsonResponse(output, status=status.HTTP_200_OK)
