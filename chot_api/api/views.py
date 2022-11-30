@@ -7,6 +7,7 @@ from .testECGpython import models
 
 from rest_framework import status, viewsets
 import json
+import base64
 
 
 
@@ -28,6 +29,8 @@ from .serializer import ECGScanSerializer
 
 import os
 from django.conf import settings
+from django.core.files.base import ContentFile
+
 
 
 class ECGScanIn(APIView):
@@ -36,13 +39,24 @@ class ECGScanIn(APIView):
     def post(self, request, format=None):
         serializer = ECGScanSerializer(data=request.data)
         if serializer.is_valid():
-            serializer.save()
-            # str_path = f"/app/{os.path.abspath(serializer.data['image_url'])}"
-            str_path = "/Users/ritijjain/Documents/Repos/CHOT-Project/fullScan.png"
+
+            instance = serializer.data # Save all data
+            print(instance)
+            data = instance.img_base64 # base64 data
+
+            format, imgstr = data.split(';base64,')
+            ext = format.split('/')[-1] 
+            data = ContentFile(base64.b64decode(base64.b64decode(imgstr)), name='temp.' + ext)
+        
+            instance.image = data
+            instance.img_base64 = ''
+            instance.save()
+
+            str_path = f"/app/{instance.image_url}"
             path = Path(str_path)
             # print(path)
             output = models.image_path_to_signal(path)
-            # print(output)
+            # # print(output)
 
 
             for key in output.keys():
@@ -54,17 +68,6 @@ class ECGScanIn(APIView):
                         # num = array[pos+ 1]
 
 
-            # output = json.loads(json.dumps(output, allow_nan=False))
-            # print("hello")
-            # for i in range(0, 11):
-            #     len_of_i = len(output[i])
-            #     print(output[str(i)])
-            #     for j in range(0, len_of_i):
-            #         print(output[str(i)][j])
-            #         try:
-            #             output[str(i)][j] == "nan"
-            #         except:
-            #             output[str(i)][j] = output[str(i)][j+1]
                 
 
             return JsonResponse(output, status=status.HTTP_200_OK)
