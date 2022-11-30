@@ -40,7 +40,7 @@ class ECGScanIn(APIView):
         serializer = ECGScanSerializer(data=request.data)
         if serializer.is_valid():
 
-            instance = serializer.data # Save all data
+            instance = serializer.save() # Save all data
             print(instance)
             data = instance.img_base64 # base64 data
 
@@ -48,7 +48,7 @@ class ECGScanIn(APIView):
             ext = format.split('/')[-1] 
             data = ContentFile(base64.b64decode(base64.b64decode(imgstr)), name='temp.' + ext)
         
-            instance.image = data
+            instance.image_url = data
             instance.img_base64 = ''
             instance.save()
 
