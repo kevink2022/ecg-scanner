@@ -41,6 +41,7 @@ class ECGScanIn(APIView):
         if serializer.is_valid():
 
             instance = serializer.data # Save all data
+            print(instance)
             data = instance.img_base64 # base64 data
 
             format, imgstr = data.split(';base64,')
