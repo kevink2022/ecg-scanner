@@ -11,14 +11,16 @@ import Foundation
 /// --Could provide some quick importing function but probably out of the scope of this project
 struct PersonalInfo
 {
-    let firstName : String
-    let lastName : String
-    let gender : PersonalInfo.Gender
-    let race : String
-    let age : Int
+    var firstName : String?
+    var lastName : String?
+    var gender : String?
+    var race : String?
+    var age : Int?
     
-    static let standard = PersonalInfo(firstName: "John", lastName: "Doe", gender: .male, race: "White", age: 50)
-
+    static let standard = PersonalInfo(firstName: "John", lastName: "Doe", gender: "Male", race: "White", age: 50)
+    static let empty = PersonalInfo()
+    
+    
     enum Gender
     {
         case male, female, unspecified, other
@@ -28,5 +30,29 @@ struct PersonalInfo
 
 extension PersonalInfo
 {
-    var fullName : String { "\(self.firstName) \(self.lastName)"}
+    var fullName : String?
+    {
+        var name = ""
+        
+        if let first = self.firstName
+        {
+            name += first
+        }
+        
+        name += " "
+        
+        if let last = self.lastName
+        {
+            name += last
+        }
+        
+        if name == " "
+        {
+            return nil
+        }
+        else
+        {
+            return name
+        }
+    }
 }

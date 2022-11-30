@@ -16,9 +16,10 @@ struct PersonalInfoView: View
     {
         VStack(alignment: .leading)
         {
-            Text("Name: \(info.fullName)")
-            Text("Age: \(info.age)")
-            Text("Race: \(info.race)")
+            if let name = info.fullName { Text("Name: \(name)")}
+            else { Text("Name: REDACTED") }
+            if let age = info.age { Text("Age: \(age)") }
+            //Text("Race: \(info.race)")
             //Text("Gender: \(info.gender)")
         }
     }
