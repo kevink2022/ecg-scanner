@@ -42,7 +42,8 @@ class ECGAppManager : NSObject, ObservableObject
     func sendImageData(data: Data)
     {
         let URLsession = URLSession.shared
-        let url = URL(string: "https://chotbackend.herokuapp.com/api/ecg-in/")!
+//        let url = URL(string: "https://chotbackend.herokuapp.com/api/ecg-in/")!
+        let url = URL(string: "https://monitors-false-submit-afternoon.trycloudflare.com/api/ecg-in/")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         //request.setValue("multipart/form-data", forHTTPHeaderField: "Content-Type")
@@ -73,7 +74,7 @@ class ECGAppManager : NSObject, ObservableObject
         let base = data.base64EncodedData().base64EncodedData()
 
         let send = (key! + base)
-        
+        	
 
         let task = URLsession.uploadTask(with: request, from: send) { data, response, error in
 
