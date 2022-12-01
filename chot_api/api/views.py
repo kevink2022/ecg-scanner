@@ -52,7 +52,7 @@ class ECGScanIn(APIView):
             instance.img_base64 = ''
             instance.save()
 
-            str_path = f"/app/{instance.image_url}"
+            str_path = f"/app/media/{instance.image_url}"
             path = Path(str_path)
             # print(path)
             output = models.image_path_to_signal(path)
