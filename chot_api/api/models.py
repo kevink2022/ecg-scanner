@@ -8,8 +8,7 @@ import os
 def upload_to(instance, filename):
         now = timezone.now()
         base, extension = os.path.splitext(filename.lower())
-        milliseconds = now.microsecond // 1000
-        return f"test{now:%Y%m%d%H%M%S}{milliseconds}{extension}"
+        return f"{now:%Y-%m-%d-%H%-M-%S}{extension}"
 
 class ECGScan(models.Model):
     image_url = models.ImageField(upload_to=upload_to, blank=True, null=True)
