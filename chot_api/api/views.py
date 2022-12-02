@@ -45,8 +45,12 @@ class ECGScanIn(APIView):
             data = instance.img_base64 # base64 data
 
             format, imgstr = data.split(';base64,')
-            ext = format.split('/')[-1] 
-            data = ContentFile(base64.b64decode(base64.b64decode(imgstr)), name='temp.' + ext)
+            ext = format.split('/')[-1]
+            
+            single_decode = base64.b64decode(imgstr)
+            double_decode = base64.b64decode(single_decode)
+            
+            data = ContentFile(double_decode, name='temp.' + ext)
         
             instance.image = data
             instance.img_base64 = ''
