@@ -1,5 +1,5 @@
 import json
-from .python.ecgdigitize.image  import openImage
+from .python.ecgdigitize.image  import openImage, decodeImage
 from .python.Conversion import convertECGLeads, exportSignals
 from .python.model.InputParameters import InputParameters
 from .python.model.Lead import Lead, LeadId
