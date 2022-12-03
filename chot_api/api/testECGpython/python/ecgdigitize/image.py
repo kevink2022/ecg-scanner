@@ -97,7 +97,7 @@ class BinaryImage(Image):
 # Input / Output
 #########################
 
-def decodeImage(binary: binaryData) -> ColorImage:
+def decodeImage(binaryData) -> ColorImage:
     data = cv2.imdecode(binaryData)
     assert data is not None
 
