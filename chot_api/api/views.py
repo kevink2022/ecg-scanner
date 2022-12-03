@@ -60,10 +60,10 @@ class ECGScanIn(APIView):
             path = Path(str_path)
             print(path)
 
-            # output = models.image_path_to_signal(path)
-            # print(output)
+            output = models.image_path_to_signal(path)
+            print(output)
 
-            output = models.image_binary_to_singal(double_decode)
+            # output = models.image_binary_to_singal(double_decode)
 
             instance.img_binary = None
             instance.save()
