@@ -17,5 +17,3 @@ Kevin Kelly
 Sunna Lee
 
 Param Nigam
-
-Shaunak Wagh
