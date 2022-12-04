@@ -12,8 +12,7 @@ def image_binary_to_singal(binary):
         rotation=0,
         timeScale=25,
         voltScale=10,
-        leads={0: Lead(x=162, y=461, width=396, height=145, startTime=0.0), 1: Lead(x=147, y=1181, width=1946, height=172, startTime=0.0), 2: Lead(x=157, y=786, width=402, height=200, startTime=0.0), 3: Lead(x=690, y=457, width=310, height=159, startTime=0.0), 4: Lead(x=683, y=635, width=368, height=143, startTime=0.0), 5: Lead(x=678, y=804, width=368, height=200, startTime=0.0), 6: Lead(x=176, y=1032, width=1897, height=158, startTime=0.0), 7: Lead(x=1104, y=606, width=450, height=215, startTime=0.0), 8: Lead(x=1109, y=823, width=441, height=170, startTime=0.0), 9: Lead(x=1605, y=461, width=492, height=118, startTime=0.0), 10: Lead(x=171, y=1346, width=1913, height=206, startTime=0.0), 11: Lead(x=1604, y=790, width=449, height=200, startTime=0.0)},
-    ))
+        leads={0: Lead(x=84, y=464, width=483, height=185, startTime=0.0), 1: Lead(x=81, y=1235, width=1967, height=206, startTime=0.0), 2: Lead(x=84, y=860, width=489, height=200, startTime=0.0), 3: Lead(x=576, y=485, width=491, height=233, startTime=0.0), 4: Lead(x=576, y=723, width=489, height=200, startTime=0.0), 5: Lead(x=573, y=835, width=489, height=200, startTime=0.0), 6: Lead(x=83, y=1151, width=1962, height=158, startTime=0.0), 7: Lead(x=1066, y=739, width=491, height=277, startTime=0.0), 8: Lead(x=1068, y=923, width=489, height=170, startTime=0.0), 9: Lead(x=1558, y=425, width=492, height=230, startTime=0.0), 10: Lead(x=1558, y=615, width=490, height=241, startTime=0.0), 11: Lead(x=1556, y=869, width=492, height=200, startTime=0.0)},    ))
 
    
     for key in extractedSignals:
