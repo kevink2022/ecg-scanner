@@ -6,7 +6,7 @@ iOS App that scans ECG printouts for digitization and analysis
 
 ----------------------------------------
 
-Group Members:
+## Group Members:
 
 Ritij Jain
 
