@@ -38,66 +38,55 @@ extension ECGAppManager
         
         queue.async
         {
-            let images = (0..<rawScans.pageCount).compactMap
+            let imageDataCollection = (0..<rawScans.pageCount).compactMap
             {
-                rawScans.imageOfPage(at: $0).cgImage
-            }
-            
-            let imageData = (0..<rawScans.pageCount).compactMap
-            {
-                if let data = rawScans.imageOfPage(at: $0).pngData() {
-//                    let filename = self.getDocumentsDirectory().appendingPathComponent("copy.png")
-//                    do {try data.write(to: filename)} catch {print("couldn't save image")}
-//                    print(filename)
-//                    return filename
-                    return data
+                let image = rawScans.imageOfPage(at: $0).cgImage
+                if let data = rawScans.imageOfPage(at: $0).jpegData(compressionQuality: 1.0)
+                {
+                    return ImageData(image: image!, data: data, id: self.getScanID())
                 }
-                
-                return nil
+                else
+                {
+                    print("ERROR")
+                    return nil
+                }
             }
             
-//            imageData.forEach
+            scans = imageDataCollection.map
+            {
+                self.sendImageData(data: $0.data, id: $0.id)
+                return ECGScan(personalInfo: .standard, image: $0.image, id: $0.id)
+            }
+            
+//            let images = (0..<rawScans.pageCount).compactMap
 //            {
-//                let filename = self.getDocumentsDirectory().appendingPathComponent("image.png")
-//                do {try $0.write(to: filename)}
-//                catch {print("file wrtie failed")}
+//                rawScans.imageOfPage(at: $0).cgImage
+//            }
+//
+//            let imageData = (0..<rawScans.pageCount).compactMap
+//            {
+//                if let data = rawScans.imageOfPage(at: $0).jpegData(compressionQuality: 1.0)
+//                {
+//                    return data
+//                }
+//                else
+//                {
+//                    return nil
+//                }
 //            }
 //
 //
+//            imageData.forEach { data in self.sendImageData(data: data, i) }
 //
-//            imageData.forEach {self.sendImageData(data: $0)}
-            
-            let send = imageData.map { _ in SendData(img_binary: "test_Data".data(using: .utf8)!) }
-            
-            let encoder = JSONEncoder()
-
-            let encoded = send.compactMap
-            {
-                do
-                {
-                    let json = try encoder.encode($0)
-                    return json
-                }
-                catch
-                {
-                    print("%%%%%%%%%%%%%%%%%%% ENCODING ERROR %%%%%%%%%%%%%%%%%%%")
-                    return Data()
-                }
-            }
-            
-            //encoded.forEach { data in self.sendImageData(data: data) }
-            imageData.forEach { data in self.sendImageData(data: data) }
-            //imageData.forEach { _ in self.sendImageData(data: "test_Data".data(using: .utf8)!) }
-            
-            scans = images.map
-            {
-                ECGScan(personalInfo: .standard, image: $0)
-            }
+//            scans = images.map
+//            {
+//                ECGScan(personalInfo: .standard, image: $0, id: self.getScanID())
+//            }
             
             // For getting text out of images, will need to look into this for personal and scan info
-            let imagesAndRequests = images.map
+            let imagesAndRequests = imageDataCollection.map
             {
-                (image: $0, request:VNRecognizeTextRequest())
+                (image: $0.image, request:VNRecognizeTextRequest())
             }
 
             let textPerPage = imagesAndRequests.map
@@ -115,7 +104,6 @@ extension ECGAppManager
 
                     let text = observations.compactMap({$0.topCandidates(1).first?.string}).joined(separator: "\n") + "\n==================== END OF SCAN ===================="
                     
-                    //print(text)
                     return text
                 }
                 catch
@@ -139,13 +127,9 @@ extension ECGAppManager
 }
 
 
-struct SendData : Codable
+struct ImageData
 {
-    let img_binary : Data
-    
-    
-    enum CodingKeys : String, CodingKey
-    {
-        case img_binary = "img_binary"
-    }
+    var image : CGImage
+    var data : Data
+    var id : Int
 }

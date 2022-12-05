@@ -35,7 +35,7 @@ struct ECGSummaryList: View
                             
                             label:
                             {
-                                Text(scan.personalInfo.fullName ?? "name" )
+                                Text(scan.personalInfo?.fullName ?? "name" )
                                     .lineLimit(1)
                             }
                         )

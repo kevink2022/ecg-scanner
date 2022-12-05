@@ -11,15 +11,17 @@ import SwiftUI
 /// This will be the final output of an ECG Scan,
 struct ECGSummary
 {
-    let person : PersonalInfo
-    let scanInfo : ScanInfo
-    let scanImage : CGImage
-    let digitalSignal : ECGSignal
-    let analysis : ECGAnalysis
+    var person : PersonalInfo
+    //let scanInfo : ScanInfo
+    var scanImage : CGImage
+    var digitalSignal : ECGSignal
+    //var analysis : ECGAnalysis
     
     // Needs to be unique
     let id : Int
 }
+
+
 
 
 

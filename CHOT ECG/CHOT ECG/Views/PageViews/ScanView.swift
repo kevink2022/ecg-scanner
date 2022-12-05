@@ -13,16 +13,33 @@ struct ScanView: View
     
     var body: some View
     {
-        VStack
+        ScrollView
         {
-            DropDownView(title: "Personal Info")
+            VStack
             {
-                PersonalInfoView(info: scan.personalInfo)
-            }
-            
-            DropDownView(title: "Scan Image")
-            {
-                ScanImageView(image: scan.image)
+                if let info = scan.personalInfo
+                {
+                    DropDownView(title: "Personal Info", titleFont: .title)
+                    {
+                        PersonalInfoView(info: info)
+                    }
+                } else { Text("None")}
+                
+                if let image = scan.image
+                {
+                    DropDownView(title: "Scan Image", titleFont: .title)
+                    {
+                        ScanImageView(image: image)
+                    }
+                }
+                
+                if let signal = scan.signal
+                {
+                    DropDownView(title: "Digital Signal", titleFont: .title)
+                    {
+                        SignalView(signals: signal)
+                    }
+                }
             }
         }
     }

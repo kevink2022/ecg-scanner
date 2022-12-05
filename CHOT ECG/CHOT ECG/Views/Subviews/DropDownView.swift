@@ -11,8 +11,10 @@ struct DropDownView<Content: View>: View
 {
     typealias C = ViewConstants.DropDownView
     let title : String
+    var titleFont : Font
     var content : () -> Content
     @State var showContent : Bool = false
+    
     
     var body: some View
     {
@@ -29,7 +31,7 @@ struct DropDownView<Content: View>: View
                     Image(systemName: showContent ? C.shownLabel : C.hiddenLabel)
                     
                     Text(title)
-                        .font(C.titleFont)
+                        .font(titleFont)
                     
                     Spacer()
                 }

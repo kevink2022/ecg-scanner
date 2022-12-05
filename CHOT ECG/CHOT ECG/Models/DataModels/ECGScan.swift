@@ -12,10 +12,11 @@ import SwiftUI
 /// the digital signal data and the analysis data.
 struct ECGScan : Identifiable
 {
-    var personalInfo : PersonalInfo
+    var personalInfo : PersonalInfo?
     //var scanInfo : ScanInfo
-    let image : CGImage
-    let id = UUID()
+    var image : CGImage?
+    var signal : ECGSignal?
+    let id : Int
     
     //let cropPoints : [CropPoint]
     // static let standard = ECGScan(personalInfo: PersonalInfo.standard, image: CGImage()

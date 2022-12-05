@@ -63,8 +63,7 @@ struct MainMenuDestination: View
                 .navigationBarBackButtonHidden(true)
             
         case Options.crop:
-            ECGSummaryList()
-                .navigationTitle("Crop Scans")
+            Text("Cropping is not supported in this release")
             
         case Options.view:
             ECGSummaryList()

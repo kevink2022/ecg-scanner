@@ -13,30 +13,31 @@ struct SummaryView: View
     
     var body: some View
     {
-        DropDownView(title: "Personal Info")
-        {
-            PersonalInfoView(info: summary.person)
-        }
-        
-        DropDownView(title: "Scan Info")
-        {
-            Text("Building")
-        }
-        
-        DropDownView(title: "Scan Image")
-        {
-            ScanImageView(image: summary.scanImage)
-        }
-        
-        DropDownView(title: "Digitized Scan")
-        {
-            Text("Building")
-        }
-        
-        DropDownView(title: "Scan Analysis")
-        {
-            Text("Building")
-        }
+//        DropDownView(title: "Personal Info")
+//        {
+//            PersonalInfoView(info: summary.person)
+//        }
+//
+//        DropDownView(title: "Scan Info")
+//        {
+//            Text("Building")
+//        }
+//
+//        DropDownView(title: "Scan Image")
+//        {
+//            ScanImageView(image: summary.scanImage)
+//        }
+//
+//        DropDownView(title: "Digitized Scan")
+//        {
+//            Text("Building")
+//        }
+//
+//        DropDownView(title: "Scan Analysis")
+//        {
+//            Text("Building")
+//        }
+        Text("hello")
     }
 }
 
