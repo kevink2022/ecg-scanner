@@ -40,28 +40,33 @@ class ECGScanIn(APIView):
         serializer = ECGScanSerializer(data=request.data)
         if serializer.is_valid():
 
-            instance = serializer.data # Save all data
+            instance = serializer.save() # Save all data
             print(instance)
             data = instance.img_base64 # base64 data
 
             format, imgstr = data.split(';base64,')
-            ext = format.split('/')[-1]
+            ext = format.split('/')[-1] 
             
             single_decode = base64.b64decode(imgstr)
             double_decode = base64.b64decode(single_decode)
             
             data = ContentFile(double_decode, name='temp.' + ext)
         
-            instance.image = data
+            instance.image_url = data
             instance.img_base64 = ''
             instance.save()
 
-            str_path = f"/app/{instance.image_url}"
+            str_path = f"/app/media/{instance.image_url}"
             path = Path(str_path)
-            # print(path)
-            output = models.image_path_to_signal(path)
-            # # print(output)
+            print(path)
 
+            output = models.image_path_to_signal(path)
+            print(output)
+
+            # output = models.image_binary_to_singal(double_decode)
+
+            instance.img_binary = None
+            instance.save()
 
             for key in output.keys():
                 for i, element in enumerate(output[key]):

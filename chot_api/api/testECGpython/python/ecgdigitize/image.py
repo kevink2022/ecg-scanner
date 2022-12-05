@@ -97,6 +97,12 @@ class BinaryImage(Image):
 # Input / Output
 #########################
 
+def decodeImage(binaryData) -> ColorImage:
+    dataBuffer = np.frombuffer(binaryData, dtype=np.uint8)
+    data = cv2.imdecode(dataBuffer,flags=1) # 1 = IMREAD_COLOR
+    assert data is not None
+
+    return ColorImage(data)
 
 def openImage(path: Path) -> ColorImage:
     assert isinstance(path, Path)
